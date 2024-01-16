@@ -8,6 +8,7 @@ import { BlueCard } from "../components/blueCard"
 import { PhotoCard } from "../components/photoCard"
 import { LiaSearchSolid } from "react-icons/lia";
 import { Krona_One, Poppins } from 'next/font/google'
+import { Footer } from "../components/footer"
 
 const krona = Krona_One({ weight: '400', style: 'normal', subsets: ['latin'] })
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
@@ -33,7 +34,7 @@ export const Content = styled.div`
     gap: 1.5rem;
 
     img {
-      margin-top: 2rem;
+      margin-top: 1.4rem;
     }
 
     input {
@@ -158,6 +159,7 @@ export const SixthSection = styled.div`
   padding: 0 2.4rem;
   margin-top: 9.6rem;
 
+
   h2 {
     text-align: center;
     font-size: 2rem;
@@ -165,6 +167,7 @@ export const SixthSection = styled.div`
 
   .cardWithTitle {
     display: flex;
+    justify-content: center;
     gap: 2rem;
     margin-top: 3.2rem;
   }
@@ -188,6 +191,9 @@ export const SeventhSection = styled.div`
   }
 
   .cardWithTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 5.2rem;
 
   }
@@ -213,13 +219,281 @@ export const EighthSection = styled.div`
   .eighthSectionCards {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
     
+    margin-top: 4.1rem;
   }
 `;
 
 export const FeedbackSection = styled.div`
+    background: linear-gradient(90deg, #7500FF 10.24%, #7500FF 14.24%, #A68BFF 110.24%);
 
+    border-bottom-width: 10.5rem;
+    border-bottom-style: solid;
+    border-bottom-color: #7500FF;
+
+
+    img {
+      z-index: 0;
+
+    }
+
+    .leftArrow {
+      position: absolute;
+      margin-top: 30rem;
+      margin-left: .5rem;
+
+      @media (min-width: 376px) {
+        display: none;
+      }
+    }
+
+    .rightArrow {
+      position: absolute;
+      margin-top: 30rem;
+      margin-left: 36rem;
+
+      @media (min-width: 376px) {
+        display: none;
+      }
+    }
+
+    .feedbackSectionTitle {
+        position: absolute;
+        display: flex;
+        padding: 0 2.4rem;
+
+        img {
+          position: absolute;
+          border-radius: 50%;
+
+          margin-top: 8.7rem;
+          margin-left: 3.8rem;
+          z-index: 1;
+        }
+
+        h2 {
+          z-index: 1;
+          margin-top: 4rem;
+          font-size: 2rem;
+          text-align: center;
+        }
+    }
+
+    .feedbackMessage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+        width: 90%;
+        height: 41rem;
+        margin-left: 2.1rem;
+        margin-top: 13.5rem;
+        position: absolute;
+        padding: 3.9rem 5rem;
+        border: 1px solid rgba(166, 139, 255, 0.20);
+        border-radius: 10px; 
+
+        background: rgba(166, 139, 255, 0.40);
+        filter: drop-shadow(10.71px 10.71px 21.42px rgba(0, 0, 0, 0.20));
+        backdrop-filter: blur(16.065000534057617px);
+
+        .messageAndGoogle {
+            width: 25.4rem;
+            height: 30.7rem;
+
+            p {
+              text-align: center;
+              font-size: 0.9rem;
+              font-weight: 300;
+              line-height: 1.35rem;
+          }
+
+          display: flex;
+          flex-direction: column;
+
+          img:nth-child(3) {
+            margin-top: 1.2rem;
+            margin-left: 1.5rem;
+            width: 20.8rem;
+          }
+        }
+
+        .photoAndName {
+          display: flex;
+
+          gap: 1.2rem;
+
+          margin-top: 5rem;
+
+          .textContainer {
+            display: flex;
+            flex-direction: column;
+            margin-top: .6rem;
+          }
+
+          h4 {
+            font-size: 1rem;
+          }
+
+          p {
+            margin-top: .9rem;
+            font-size: .7rem;
+          }
+
+          img {
+            border-radius: 50%;
+          }
+        }
+}
+`;
+
+export const CoursesSection = styled.div`
+    margin-bottom: 6.4rem;
+
+    .sectionTitle {
+      padding: 0 2.4rem;
+
+       h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 2.1rem;
+       }
+
+       .coursesDiv {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+         .courseList {
+          width: 15.2rem;
+          margin-top: 2.7rem;
+          list-style-type: none;
+         }
+  
+         .courseList li {
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 20px;
+         }
+
+         .courseList2 {
+          width: 15.3rem;
+          margin-top: 2.7rem;
+          list-style-type: none;
+         }
+
+         .courseList2 li {
+
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 20px;
+         }
+
+         .courseList2:nth-child(4) {
+          margin-top: 8.9rem;
+         }
+
+         .courseList:nth-child(5) {
+          margin-top: 2rem;
+         }
+
+       }
+
+       .afterCoursesList {
+
+        h4 {
+          font-weight: 700;
+          font-size: 1.2rem;
+        }
+
+         .iconsSection {
+            display: flex;
+            align-items: center;
+            margin-top: .9rem;
+            gap: .7rem;
+         }
+       }
+
+       .appDownload {
+        margin-top: 3rem;
+
+        .storesIcons {
+          display: flex;
+          margin-top: 0.6rem;
+          gap: .5rem;
+        }
+       }
+
+       .mecSection {
+          width: 14.7rem;
+          margin-top: 3rem;
+
+          h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+
+          img {
+            margin-top: 2.4rem;
+            margin-bottom: 3.3rem;
+          }
+
+       }
+
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: white;
+
+    }
+
+    .leanMore {
+      padding: 0 2.4rem;
+      margin-top: 2.2rem;
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: white;
+
+      .learMoreCourse {
+        margin-top: 3rem;
+
+        p {
+          font-size: 1rem;
+          font-weight: 500;
+
+          margin-top: .6rem;
+        }
+
+        p:nth-child(2) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+
+    .itemsList {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.9rem;
+      padding: 0 2.4rem;
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        font-size: 1rem;
+        font-weight: 500;
+
+        margin-top: .6rem;
+      }
+    }
 `;
 
 export default function Home() {
@@ -231,7 +505,6 @@ export default function Home() {
         <div className="navBar">
           <img src="/navbar.svg" alt="" />
           <Input
-            icon={LiaSearchSolid}
             placeholder="Pesquise por um curso"
           />
         </div>
@@ -282,7 +555,7 @@ export default function Home() {
           <h2 className={krona.className}>Abra novas portas para o seu futuro</h2>
           <div className="cardWithTitle">
             <img src="/card1.png" alt="" />
-            <BackgroundCard image="/card2.png" title="+ de 2.500 empresas e órgãos públicos conveniados"/>
+            <BackgroundCard image="/card2.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
           </div>
           <div className="cardsDots">
             <img src="/dots.svg" alt="" />
@@ -306,17 +579,172 @@ export default function Home() {
           <h2 className={krona.className}>Sua jornada é Única</h2>
           <p className={poppins.className}>Escolha a melhor modalidade para você</p>
           <div className="eighthSectionCards">
-              <PhotoCard image="/photo1.png" title="GRADUAÇÃO" />
-              <PhotoCard image="/photo2.png" title="PÓS ONLINE" />
-              <PhotoCard image="/photo3.png" title="SEGUNDA GRADUAÇÃO" />
-              <PhotoCard image="/photo4.png" title="DISCIPLINAS ISOLADAS" />
+            <PhotoCard image="/photo1.png" title="GRADUAÇÃO" />
+            <PhotoCard image="/photo2.png" title="PÓS ONLINE" />
+            <PhotoCard image="/photo3.png" title="SEGUNDA GRADUAÇÃO" />
+            <PhotoCard image="/photo4.png" title="DISCIPLINAS ISOLADAS" />
           </div>
         </div>
       </EighthSection>
 
       <FeedbackSection>
+        <div className="feedbackSectionTitle">
+          <h2 className={krona.className}>Quem faz a escolha certa, não se arrepende</h2>
+          <img src="/aluno.png" alt="" />
+        </div>
+        <img class="leftArrow" src="/leftArrow.svg" alt="" />
+        <img class="rightArrow" src="/rightArrow.svg" alt="" />
+        <div className="feedbackMessage">
+          <div className="messageAndGoogle">
+            <p className={poppins.className}>“A minha experiência como aluno da Faculdade Única foi maravilhosa, pois me possibilitou ter outra graduação superior (Licenciatura em Física) além de todo o arcabouço de conhecimento adquirido durante o curso, ajudando-me a estar bem preparado para o mercado de trabalho. Atualmente estou cursando outra segunda graduação (Licenciatura em Educação Física) e não tenho dúvida que será novamente uma experiência incrível. Além disso, a instituição de ensino é nota máxima no MEC e desejo que até o final desse curso ela alcance a etapa de ser Centro Universitário. Então só gratidão a toda a equipe da faculdade”</p>
+            <div className="photoAndName">
+              <img src="/aluno2.png" alt="" />
+              <div className="textContainer">
+                <h4 className={poppins.className}>TIAGO COSTA DA SILVA</h4>
+                <p className={poppins.className}>Segunda Graduação em Física</p>
+              </div>
+            </div>
+            <img src="/google.svg" alt="" />
+          </div>
+        </div>
+        <img class="retangularView" src="/retangular.svg" alt="" />
 
       </FeedbackSection>
+
+      <CoursesSection>
+        <div className="sectionTitle">
+          <h4 className={poppins.className}>Graduação</h4>
+          <div className="coursesDiv">
+            <ul className="courseList">
+              <div className={poppins.className}>
+                <li>Administração</li>
+                <li>Análise e Desenvolvimento de Sistemas</li>
+                <li>Artes Visuais</li>
+                <li>Arquitetura e Urbanismo</li>
+                <li>Biblioteconomia</li>
+                <li>Ciência da Computação</li>
+                <li>Ciências Biológicas</li>
+                <li>Ciências Contábeis</li>
+                <li>Ciências Sociais</li>
+                <li>Educação Especial</li>
+              </div>
+            </ul>
+
+            <ul className="courseList2">
+              <div className={poppins.className}>
+                <li>Bacharelado em Educação Física</li>
+                <li>Licenciatura em Educação Física</li>
+                <li>Ensino Religioso</li>
+                <li>Empreendedorismo</li>
+                <li>Engenharia Ambiental e Sanitária</li>
+                <li>Engenharia Civil</li>
+                <li>Engenharia de Controle e Automação</li>
+                <li>Engenharia de Produção</li>
+                <li>Engenharia Elétrica</li>
+                <li>Engenharia Mecânica</li>
+              </div>
+            </ul>
+
+            <ul className="courseList">
+              <div className={poppins.className}>
+                <li>Filosofia</li>
+                <li>Física</li>
+                <li>Geografia</li>
+                <li>Geoprocessamento</li>
+                <li>Gestão Ambiental</li>
+                <li>Gestão de Cidades Inteligentes</li>
+                <li>Gestão de Recursos Humanos</li>
+                <li>Gestão Financeira</li>
+                <li>Gestão Pública</li>
+                <li>História</li>
+              </div>
+            </ul>
+
+            <ul className="courseList2">
+              <div className={poppins.className}>
+                <li>Bacharelado em Letras-Libras</li>
+                <li>Licenciatura em Letras-Libras</li>
+                <li>Letras-Português</li>
+                <li>Letras-Português e Espanhol</li>
+                <li>Letras-Português e Inglês</li>
+                <li>Logística</li>
+                <li>Marketing</li>
+                <li>Matemática</li>
+                <li>Pedagogia</li>
+                <li>Processos Gerenciais</li>
+              </div>
+            </ul>
+
+            <ul className="courseList">
+              <div className={poppins.className}>
+                <li>Psicopedagogia</li>
+                <li>Publicidade e Propaganda</li>
+                <li>Química</li>
+                <li>Segurança no Trabalho</li>
+                <li>Serviço Social</li>
+                <li>Serviços Jurídicos e Notariais</li>
+                <li>Sistemas de Telecomunicações</li>
+                <li>Sistemas para Internet</li>
+                <li>Sistemas de Informação</li>
+                <li>Teologia</li>
+              </div>
+            </ul>
+          </div>
+
+          <div className="afterCoursesList">
+            <h4 className={poppins.className}>Siga nossa faculdade:</h4>
+            <div className="iconsSection">
+              <img src="/facebook.svg" alt="" />
+              <img src="/instagram.svg" alt="" />
+              <img src="/youtube.svg" alt="" />
+            </div>
+            <div className="appDownload">
+              <h4 className={poppins.className}>Baixe nosso App:</h4>
+              <div className="storesIcons">
+                <img src="/playstore.svg" alt="" />
+                <img src="/appstore.svg" alt="" />
+              </div>
+            </div>
+            <div className="mecSection">
+              <h4 className={poppins.className}>Consulte aqui o cadastro da Instituição no Sistema e-MEC</h4>
+              <img src="/mec.png" alt="" />
+            </div>
+          </div>
+
+        </div>
+        <div className="leanMore">
+          <h4 className={poppins.className}>Saiba mais da Faculdade Única</h4>
+          <div className="learMoreCourse">
+            <h4 className={poppins.className}>Pós-Graduação</h4>
+            <p className={poppins.className}>Ver nossos cursos</p>
+          </div>
+          <div className="learMoreCourse">
+            <h4 className={poppins.className}>Segunda Graduação</h4>
+            <p className={poppins.className}>Ver nossos cursos</p>
+          </div>
+          <div className="learMoreCourse">
+            <h4 className={poppins.className}>Disciplinas Isoladas</h4>
+            <p className={poppins.className}>Ver nossos cursos</p>
+          </div>
+          <div className="learMoreCourse">
+            <h4 className={poppins.className}>Cursos Livres</h4>
+            <p className={poppins.className}>Ver nossos cursos</p>
+          </div>
+        </div>
+        <div className="aboutProminas">
+          <div className="itemsList">
+            <a className={poppins.className} href="#">Teste vocacional</a>
+            <a className={poppins.className} href="#">Seja um embaixador</a>
+            <a className={poppins.className} href="#">Fale com a gente</a>
+            <a className={poppins.className} href="#">Quem somos</a>
+            <a className={poppins.className} href="#">Privacidade</a>
+            <a className={poppins.className} href="#">Termos de Uso</a>
+            <a className={poppins.className} href="#">Trabalhe Conosco</a>
+          </div>
+        </div>
+      </CoursesSection>
+
+      <Footer />
 
     </Container>
   )
