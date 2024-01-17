@@ -1221,8 +1221,8 @@ export default function Home() {
           <h2 className={krona.className}>Quem faz a escolha certa, não se arrepende</h2>
           <img src="/aluno.png" alt="" />
         </div>
-        <img class="leftArrow" src="/leftArrow.svg" alt="" />
-        <img class="rightArrow" src="/rightArrow.svg" alt="" />
+        <img className="leftArrow" src="/leftArrow.svg" alt="" />
+        <img className="rightArrow" src="/rightArrow.svg" alt="" />
         <div className="feedbackMessage">
           <div className="messageAndGoogle">
             <p className={poppins.className}>“A minha experiência como aluno da Faculdade Única foi maravilhosa, pois me possibilitou ter outra graduação superior (Licenciatura em Física) além de todo o arcabouço de conhecimento adquirido durante o curso, ajudando-me a estar bem preparado para o mercado de trabalho. Atualmente estou cursando outra segunda graduação (Licenciatura em Educação Física) e não tenho dúvida que será novamente uma experiência incrível. Além disso, a instituição de ensino é nota máxima no MEC e desejo que até o final desse curso ela alcance a etapa de ser Centro Universitário. Então só gratidão a toda a equipe da faculdade”</p>
@@ -1236,7 +1236,7 @@ export default function Home() {
             <img src="/google.svg" alt="" />
           </div>
         </div>
-        <img class="retangularView" src="/retangular.svg" alt="" />
+        <img className="retangularView" src="/retangular.svg" alt="" />
 
       </FeedbackSection>
 

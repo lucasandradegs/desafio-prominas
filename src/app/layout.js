@@ -8,6 +8,7 @@ import React, { useState } from 'react'
 import { lightTheme, darkTheme } from "../styles/theme"
 
 const StyledApp = styled.div`
+
   color: ${(props) => props.theme.fontColor};
 
 `;
@@ -25,7 +26,6 @@ export default function RootLayout({ children }) {
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme }>
         <GlobalStyles />
         <StyledApp> <button onClick={() => themeToggler()}></button>
-        <label htmlFor="themeButton" onClick={() => themeToggler()}></label>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
           </StyledApp>
         </ThemeProvider>
