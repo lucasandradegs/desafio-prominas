@@ -12,6 +12,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
+
   height: 3.5rem;
   width: 100%;
   padding: 0 2.4rem;
@@ -45,6 +46,13 @@ export const Container = styled.div`
     width: 100%;
     justify-content: space-between;
 
+    color: #fff;
+
+    img, p {
+      cursor: pointer;
+    }
+
+
     @media (max-width: 1439px) {
       display: none;
     }
@@ -54,7 +62,8 @@ export const Container = styled.div`
 
 `;
 
-export function Header({ children }) {
+export function Header() {
+
     return (
         <Container>
             <div className="topSideMobile">

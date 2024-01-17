@@ -2,22 +2,25 @@
 
 import { Header } from "../components/header";
 import { Input } from "../components/input";
-import { Card } from "../components/card"
-import { BackgroundCard } from "../components/cardImg"
-import { BlueCard } from "../components/blueCard"
-import { PhotoCard } from "../components/photoCard"
+import { FirstSectionCard } from "../components/firstSectionCard"
+import { SixthSectionCard } from "../components/sixthSectionCard"
+import { SeventhSectionCard } from "../components/seventhSectionCard"
+import { EigthSectionCard } from "../components/eigthSectionCard"
 import { DesktopCard } from "../components/desktopCard";
 import { Krona_One, Poppins } from 'next/font/google'
 import { Footer } from "../components/footer"
+import styled from "styled-components";
+
+
 
 const krona = Krona_One({ weight: '400', style: 'normal', subsets: ['latin'] })
-const poppins = Poppins({ weight: '400', subsets: ['latin'] })
+const poppins = Poppins({ weight: '400', style: 'normal', subsets: ['latin'] })
 
-import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
   height: 100%;
+
 
   .desktopBackground {
     @media (min-width: 1440px) {
@@ -69,6 +72,9 @@ export const Content = styled.div`
   }
 
   .desktopContent {
+    img {
+      cursor: pointer;
+    }
 
     display: flex;
     align-items: center;
@@ -109,6 +115,8 @@ export const Content = styled.div`
       p {
         font-size: 1.5rem;
         font-weight: 500;
+        color: #fff;
+        cursor: pointer;
       }
 
       button {
@@ -146,11 +154,13 @@ export const Section = styled.div`
 
     h1 {
       font-size: 2.5rem;
+      color: #fff;
     }
 
     p {
       margin-top: 1.4rem;
       font-size: 2.2rem;
+      color: #fff;
     }
   }
 
@@ -182,6 +192,7 @@ export const Section = styled.div`
     h2 {
       margin-top: 50rem;
       font-size: 6rem;
+      color: #fff;
     }
 
     @media (max-width: 1439px) {
@@ -206,6 +217,8 @@ export const SecondSection = styled.div`
         
         font-weight: 600;
         font-size: 2rem;
+
+        color: #fff;
       }
 
       @media (min-width: 1440px) {
@@ -228,9 +241,15 @@ export const SecondSection = styled.div`
 
       h2 {
         font-size: 3.2rem;
-        margin-top: 8rem;
+        margin-top: 11.2rem;
         margin-left: 47rem;
         font-weight: 600;
+
+        color: #fff;
+
+        @media (min-width: 1500px) {
+          margin-left: 62rem;
+        }
       }
 
       @media (max-width: 1439px) {
@@ -267,6 +286,8 @@ export const ThirdSection = styled.div`
           text-align: center;
           margin-top: 2.6rem;
           font-size: 1.5rem;
+          font-weight: 500;
+          line-height: 1.95rem;
 
           @media (min-width: 1440px) {
             font-size: 2.2rem;
@@ -277,7 +298,7 @@ export const ThirdSection = styled.div`
 
     @media (min-width: 1440px) {
       padding: 0 12.4rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
     }
 `;
 
@@ -585,6 +606,7 @@ export const FeedbackSection = styled.div`
           margin-top: 4rem;
           font-size: 2rem;
           text-align: center;
+          color: #fff;
         }
     }
 
@@ -616,6 +638,7 @@ export const FeedbackSection = styled.div`
               font-size: 0.9rem;
               font-weight: 300;
               line-height: 1.35rem;
+              color: #fff;
           }
 
           display: flex;
@@ -643,11 +666,13 @@ export const FeedbackSection = styled.div`
 
           h4 {
             font-size: 1rem;
+            color: #fff;
           }
 
           p {
             margin-top: .9rem;
             font-size: .7rem;
+            color: #fff;
           }
 
           img {
@@ -673,6 +698,7 @@ export const DesktopFeedback = styled.div`
         padding-top: 10rem;
         text-align: center;
         font-size: 3.2rem;
+        color: #fff;
       }
     }
 
@@ -980,6 +1006,8 @@ export const CoursesSection = styled.div`
         }
       }
 
+      
+
         border-bottom-width: 2px;
         border-bottom-style: solid;
         border-bottom-color: white;
@@ -1009,6 +1037,12 @@ export const CoursesSection = styled.div`
       }
     }
 
+    .lightMode {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: #000;
+      }
+
     .itemsList {
       display: flex;
       flex-direction: column;
@@ -1021,12 +1055,12 @@ export const CoursesSection = styled.div`
         justify-content: space-between;
       }
 
-      a {
-        text-decoration: none;
-        color: white;
+      p {
 
         font-size: 1rem;
         font-weight: 500;
+
+        cursor: pointer;
 
         margin-top: .6rem;
 
@@ -1038,11 +1072,12 @@ export const CoursesSection = styled.div`
 `;
 
 export default function Home() {
+
+
   return (
     <Container>
 
       <Header />
-
       <Content>
         <div className="navBar">
           <img src="/navbar.svg" alt="" />
@@ -1108,9 +1143,9 @@ export default function Home() {
 
       <CardSection>
         <div className="cardDisplay">
-          <Card image="/diploma.png" title="+ de 489 mil Alunos certificados" />
-          <Card image="/brasil.png" title="+ de 250 Polos em todo Brasil" />
-          <Card image="/curso-online.png" title="+ de 900 cursos em diversas modalidades de ensino" />
+          <FirstSectionCard image="/diploma.png" title="+ de 489 mil Alunos certificados" />
+          <FirstSectionCard image="/brasil.png" title="+ de 250 Polos em todo Brasil" />
+          <FirstSectionCard image="/curso-online.png" title="+ de 900 cursos em diversas modalidades de ensino" />
         </div>
       </CardSection>
 
@@ -1130,13 +1165,13 @@ export default function Home() {
           <h2 className={krona.className}>Abra novas portas para o seu futuro</h2>
           <div className="cardWithTitle">
             <img src="/card1.png" alt="" />
-            <BackgroundCard image="/card2.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
+            <SixthSectionCard image="/card2.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
           </div>
           <div className="cardWithTitleDesktop">
-            <BackgroundCard image="/card1desk.png" title="Cursos com nota máxima na avaliação do MEC" />
-            <BackgroundCard image="/card2desk.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
-            <BackgroundCard image="/card3desk.png" title="Estágio remunerado desde os primeiros períodos" />
-            <BackgroundCard image="/card4desk.png" title="Professores mestres e doutores" />
+            <SixthSectionCard image="/card1desk.png" title="Cursos com nota máxima na avaliação do MEC" />
+            <SixthSectionCard image="/card2desk.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
+            <SixthSectionCard image="/card3desk.png" title="Estágio remunerado desde os primeiros períodos" />
+            <SixthSectionCard image="/card4desk.png" title="Professores mestres e doutores" />
           </div>
           <div className="cardsDots">
             <img className="dotsMobile" src="/dots.svg" alt="" />
@@ -1149,14 +1184,14 @@ export default function Home() {
         <div className="seventhSectionTitle">
           <h2 className={krona.className}>Mais que educação, uma transformação</h2>
           <div className="cardWithTitle">
-            <BlueCard image="/missao.png" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
-            <BlueCard image="/visao.png" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
-            <BlueCard image="/valores.png" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
+            <SeventhSectionCard image="/missao.png" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
+            <SeventhSectionCard image="/visao.png" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
+            <SeventhSectionCard image="/valores.png" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
           </div>
           <div className="cardWithTitleDesktop">
-            <BlueCard image="/missaodesk.png" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
-            <BlueCard image="/visaodesk.png" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
-            <BlueCard image="/valoresdesk.png" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
+            <SeventhSectionCard image="/missaodesk.png" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
+            <SeventhSectionCard image="/visaodesk.png" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
+            <SeventhSectionCard image="/valoresdesk.png" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
           </div>
         </div>
       </SeventhSection>
@@ -1166,17 +1201,17 @@ export default function Home() {
           <h2 className={krona.className}>Sua jornada é Única</h2>
           <p className={poppins.className}>Escolha a melhor modalidade para você</p>
           <div className="eighthSectionCards">
-            <PhotoCard image="/photo1.png" title="GRADUAÇÃO" />
-            <PhotoCard image="/photo2.png" title="PÓS ONLINE" />
-            <PhotoCard image="/photo3.png" title="SEGUNDA GRADUAÇÃO" />
-            <PhotoCard image="/photo4.png" title="DISCIPLINAS ISOLADAS" />
+            <EigthSectionCard image="/photo1.png" title="GRADUAÇÃO" />
+            <EigthSectionCard image="/photo2.png" title="PÓS ONLINE" />
+            <EigthSectionCard image="/photo3.png" title="SEGUNDA GRADUAÇÃO" />
+            <EigthSectionCard image="/photo4.png" title="DISCIPLINAS ISOLADAS" />
           </div>
 
           <div className="desktopCardSection">
-            <PhotoCard image="/alunoDesk.png" title="GRADUAÇÃO" />
-            <PhotoCard image="/aluno2desk.png" title="PÕS ONLINE" />
-            <PhotoCard image="/aluno3desk.png" title="SEGUNDA GRADUAÇÃO" />
-            <PhotoCard image="/aluno4desk.png" title="DISCIPLINAS ISOLADAS" />
+            <EigthSectionCard image="/alunoDesk.png" title="GRADUAÇÃO" />
+            <EigthSectionCard image="/aluno2desk.png" title="PÕS ONLINE" />
+            <EigthSectionCard image="/aluno3desk.png" title="SEGUNDA GRADUAÇÃO" />
+            <EigthSectionCard image="/aluno4desk.png" title="DISCIPLINAS ISOLADAS" />
           </div>
         </div>
       </EighthSection>
@@ -1366,7 +1401,7 @@ export default function Home() {
               <img src="/mecdesk.png" alt="" />
             </div>
           </div>
-
+          <div className="lightMode"></div>
         </div>
         <div className="leanMore">
           <h4 className={poppins.className}>Saiba mais da Faculdade Única</h4>
@@ -1388,18 +1423,20 @@ export default function Home() {
               <p className={poppins.className}>Ver nossos cursos</p>
             </div>
           </div>
+          <div className="lightMode"></div>
         </div>
         <div className="aboutProminas">
           <div className="itemsList">
-            <a className={poppins.className} href="#">Teste vocacional</a>
-            <a className={poppins.className} href="#">Seja um embaixador</a>
-            <a className={poppins.className} href="#">Fale com a gente</a>
-            <a className={poppins.className} href="#">Quem somos</a>
-            <a className={poppins.className} href="#">Privacidade</a>
-            <a className={poppins.className} href="#">Termos de Uso</a>
-            <a className={poppins.className} href="#">Trabalhe Conosco</a>
+            <p className={poppins.className}>Teste vocacional</p>
+            <p className={poppins.className}>Seja um embaixador</p>
+            <p className={poppins.className}>Fale com a gente</p>
+            <p className={poppins.className}>Quem somos</p>
+            <p className={poppins.className}>Privacidade</p>
+            <p className={poppins.className}>Termos de Uso</p>
+            <p className={poppins.className}>Trabalhe Conosco</p>
           </div>
         </div>
+
       </CoursesSection>
 
       <Footer />

@@ -16,6 +16,13 @@ export const Container = styled.div`
 
     border-radius: .8rem;
 
+    transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05); 
+        background-color: #052d79; 
+    }
+
     .cardStyle {
         position: absolute;
 
@@ -56,6 +63,8 @@ export const Container = styled.div`
 
             font-size: 2.5rem;
 
+            color: #fff;
+
             @media (min-width: 1440px) {
                 font-size: 3rem;
             }
@@ -66,6 +75,8 @@ export const Container = styled.div`
             margin-top: 1.2rem;
             line-height: 26px;
             font-size: 2rem;
+
+            color: #fff;
 
             @media (min-width: 1440px) {
                 font-size: 2.2rem;
@@ -88,7 +99,7 @@ export const Container = styled.div`
     }
 `;
 
-export function BlueCard({ image, title, subtitle }) {
+export function SeventhSectionCard({ image, title, subtitle }) {
     return (
         <Container>
             <div className="cardTitle">

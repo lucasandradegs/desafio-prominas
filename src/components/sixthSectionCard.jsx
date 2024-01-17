@@ -10,9 +10,17 @@ export const Container = styled.div`
     width: 152px;
     height: 188px;
 
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 
     .cardTitle {
         display: flex;
+        position: relative;
 
         @media (min-width: 1440px) {
         }
@@ -24,6 +32,8 @@ export const Container = styled.div`
             text-align: center;
             font-size: 1.2rem;
             z-index: 1;
+            color: #fff;
+            position: relative;
 
             @media (min-width: 1440px) {
                 margin-top: 22.9rem;
@@ -37,9 +47,16 @@ export const Container = styled.div`
 
         img {
             position: absolute;
-            opacity: 50%;
+            opacity: 80%;
             border-radius: .4rem;
             z-index: 0;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+            
+        }
+
+        &:hover img {
+            opacity: 30%;
         }
     }
 
@@ -50,7 +67,7 @@ export const Container = styled.div`
     }
 `;
 
-export function BackgroundCard({ image, title }) {
+export function SixthSectionCard({ image, title }) {
     return (
         <Container>
             <div className="cardTitle">

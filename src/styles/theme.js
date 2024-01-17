@@ -1,11 +1,9 @@
-export default {
-    COLORS: {
-        DARK_100: "#000000",
-        
-        GRAY_100: "#666464",
-        
-        PURPLE_100: "#7500FF",
+export const lightTheme = {
+    body: '#fff',
+    fontColor: '#000'
+}
 
-        LIGHT_100: "#FFFFFF",
-    }
+export const darkTheme = {
+    body: '#000',
+    fontColor: '#fff',
 }
