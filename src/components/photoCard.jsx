@@ -10,6 +10,11 @@ export const Container = styled.div`
     width: 18.75rem;
     height: 40.2rem;
 
+    @media (min-width: 1440px) {
+        width: 36rem;
+        height: 96.4rem;
+    }
+
     .cardTitle {
         display: flex;
         justify-content: center;
@@ -22,11 +27,18 @@ export const Container = styled.div`
             justify-content: center;
             align-items: center;
 
+
             h2 {
                 margin-top: 27.8rem;
                 text-transform: uppercase;
                 font-size: 1.6rem;
                 z-index: 1;
+
+                @media (min-width: 1440px) {
+                    margin-top: 68.9rem;
+
+                    font-size: 3.2rem;
+                }
             }
 
             button {
@@ -39,6 +51,18 @@ export const Container = styled.div`
                 border-radius: .3rem;
                 background-color: transparent;
                 color: #FFF;
+                z-index: 1;
+
+                @media (min-width: 1440px) {
+                    width: 24.5rem;
+                    height: 4.7rem;
+
+                    font-size: 1.4rem;
+                    z-index: 1;
+
+                    margin-top: 9.1rem;
+
+                }
             }
     
         }

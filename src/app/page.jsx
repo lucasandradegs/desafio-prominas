@@ -6,10 +6,9 @@ import { Card } from "../components/card"
 import { BackgroundCard } from "../components/cardImg"
 import { BlueCard } from "../components/blueCard"
 import { PhotoCard } from "../components/photoCard"
-import { LiaSearchSolid } from "react-icons/lia";
+import { DesktopCard } from "../components/desktopCard";
 import { Krona_One, Poppins } from 'next/font/google'
 import { Footer } from "../components/footer"
-import Image from "next/image";
 
 const krona = Krona_One({ weight: '400', style: 'normal', subsets: ['latin'] })
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
@@ -75,6 +74,8 @@ export const Content = styled.div`
     align-items: center;
     gap: 2.4rem;
 
+    z-index: 1;
+
     input {
       width: 35rem;
       height: 4.8rem;
@@ -90,8 +91,8 @@ export const Content = styled.div`
   @media (min-width: 1440px) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 9.1rem;
+    justify-content: center;
 
     background: rgba(73, 73, 73, 0.40);
 
@@ -102,6 +103,7 @@ export const Content = styled.div`
     .menuOptions {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 1.9rem;
 
       p {
@@ -165,6 +167,9 @@ export const Section = styled.div`
   }
 
   .bannerDesktop {
+    width: 100%;
+    z-index: 0;
+
     @media (max-width: 1439px) {
       display: none;
     }
@@ -175,7 +180,7 @@ export const Section = styled.div`
     position: absolute;
 
     h2 {
-      margin-top: 45rem;
+      margin-top: 50rem;
       font-size: 6rem;
     }
 
@@ -294,6 +299,7 @@ export const CardSection = styled.div`
         
         .cardDisplay {
           display: flex;
+          justify-content: center;
           gap: 2rem;
         }
       }
@@ -406,6 +412,8 @@ export const SixthSection = styled.div`
     .dotsDesktop {
       margin-top: 3.5rem;
 
+      cursor: pointer;
+
       @media (max-width: 1439px) {
         display: none;
       }
@@ -479,12 +487,20 @@ export const EighthSection = styled.div`
     h2 {
       text-align: center;
       font-size: 2rem;
+
+      @media (min-width:1440px) {
+        font-size: 3.2rem;
+      }
     }
 
     p {
       text-align: center;
       font-size: 1.5rem;
       margin-top: .3rem;
+
+      @media (min-width: 1440px) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -494,6 +510,22 @@ export const EighthSection = styled.div`
     justify-content: center;
     
     margin-top: 4.1rem;
+    
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  .desktopCardSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
   }
 `;
 
@@ -508,6 +540,10 @@ export const FeedbackSection = styled.div`
     img {
       z-index: 0;
 
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
     }
 
     .leftArrow {
@@ -621,16 +657,122 @@ export const FeedbackSection = styled.div`
 }
 `;
 
+export const DesktopFeedback = styled.div`
+    height: 612px;
+    background: linear-gradient(90deg, #7500FF 10.24%, #7500FF 14.24%, #A68BFF 110.24%);
+
+    padding: 0 12.4rem;
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+
+
+    .feedbackTitle {
+      h2 {
+        padding-top: 10rem;
+        text-align: center;
+        font-size: 3.2rem;
+      }
+    }
+
+    .background1 {
+      position: absolute;
+      right: 0;
+      z-index: 0;
+      
+    }
+
+    .background2 {
+      position: absolute;
+      right: 0;
+      z-index: 0;
+    }
+
+    .feedbackCards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+
+      position: relative;
+
+      margin-top: 5rem;
+
+      backdrop-filter: blur(16.065000534057617px);
+
+    }
+
+
+`;
+
+export const DesktopQuestions = styled.div`
+    padding: 0 12.4rem;
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+
+    .titleAndQuestions {
+      padding-top: 8rem;
+
+      h2 {
+        text-align: center;
+        font-size: 3.2rem;
+      }
+
+      .FAQ {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4%;
+
+        
+        
+        
+        .questions {
+          
+          display: flex;
+          justify-content: space-between;
+          
+          border-bottom-width: 2px;
+          border-bottom-style: solid;
+          border-bottom-color: white;
+          
+          p {
+            cursor: pointer;
+            margin-top: 3.6rem;
+            margin-bottom: 3rem;
+            font-size: 1.8rem;
+            font-weight: 500;
+          }
+
+          img {
+            cursor: pointer;
+          }
+        }
+
+      }
+    }
+`;
+
 export const CoursesSection = styled.div`
     margin-bottom: 6.4rem;
 
     .sectionTitle {
       padding: 0 2.4rem;
 
+      @media (min-width: 1440px) {
+        padding: 0 12.4rem;
+      }
+
        h4 {
         font-size: 1.2rem;
         font-weight: 700;
         margin-top: 2.1rem;
+
+        @media (min-width: 1440px) {
+          font-size: 2rem;
+          margin-top: 14rem;
+        }
        }
 
        .coursesDiv {
@@ -639,22 +781,48 @@ export const CoursesSection = styled.div`
         flex-wrap: wrap;
         gap: 2rem;
 
+
+        @media (min-width: 1440px) {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          gap: 3.2rem;
+          margin-top: 5rem;
+        }
+
          .courseList {
           width: 15.2rem;
           margin-top: 2.7rem;
           list-style-type: none;
+
+          @media (min-width: 1440px) {
+            margin-top: 0;
+            width: 24.2rem;
+          }
          }
   
          .courseList li {
           font-size: 1rem;
           font-weight: 500;
           line-height: 20px;
+
+          cursor: pointer;
+
+          @media (min-width: 1440px) {
+            font-size: 1.2rem;
+            line-height: 3.5rem;
+          }
          }
 
          .courseList2 {
           width: 15.3rem;
           margin-top: 2.7rem;
           list-style-type: none;
+
+          @media (min-width: 1440px) {
+            margin-top: 0;
+            width: 24.2rem;
+          }
          }
 
          .courseList2 li {
@@ -662,23 +830,50 @@ export const CoursesSection = styled.div`
           font-size: 1rem;
           font-weight: 500;
           line-height: 20px;
+
+          cursor: pointer;
+
+          @media (min-width: 1440px) {
+            font-size: 1.2rem;
+            line-height: 3.5rem;
+          }
          }
 
          .courseList2:nth-child(4) {
           margin-top: 8.9rem;
+
+          @media (min-width: 1440px) {
+            margin-top: 0;
+          }
          }
 
          .courseList:nth-child(5) {
           margin-top: 2rem;
+
+          @media (min-width: 1440px) {
+            margin-top: 0;
+          }
          }
 
        }
 
        .afterCoursesList {
 
+        @media (min-width: 1440px) {
+          display: flex;
+          justify-content: space-between;
+          align-items: normal;
+          width: 100%;
+          margin-bottom: 4.3rem;
+        }
+
         h4 {
           font-weight: 700;
           font-size: 1.2rem;
+
+          @media (min-width: 1440px) {
+            font-size: 2rem;
+          }
         }
 
          .iconsSection {
@@ -686,22 +881,61 @@ export const CoursesSection = styled.div`
             align-items: center;
             margin-top: .9rem;
             gap: .7rem;
+
+            cursor: pointer;
+
+            @media (min-width: 1440px) {
+              img {
+                width: 5rem;
+              }
+            }
          }
        }
 
        .appDownload {
         margin-top: 3rem;
 
+
+        @media (min-width: 1440px) {
+          margin-top: 0;
+        }
+
         .storesIcons {
           display: flex;
           margin-top: 0.6rem;
           gap: .5rem;
+
+          cursor: pointer;
+
+          @media (min-width: 1440px) {
+              img {
+                width: 18rem;
+              }
+            }
+        }
+       }
+
+       .mecSectionDesk {
+          display: flex;
+          gap: 4.5rem;
+
+          h4 {
+            width: 25.6rem;
+          }
+
+        
+        @media (max-width: 1439px) {
+          display: none;
         }
        }
 
        .mecSection {
           width: 14.7rem;
           margin-top: 3rem;
+
+          @media (min-width: 1440px) {
+            display: none;
+          }
 
           h4 {
             font-size: 1.2rem;
@@ -725,9 +959,25 @@ export const CoursesSection = styled.div`
       padding: 0 2.4rem;
       margin-top: 2.2rem;
 
+      @media (min-width: 1440px) {
+        padding: 0 12.4rem;
+        margin-top: 6rem;
+      }
+
+      .learMoreContainer {
+        @media (min-width: 1440px) {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
       h4 {
         font-size: 1.2rem;
         font-weight: 700;
+
+        @media (min-width: 1440px) {
+          font-size: 2rem;
+        }
       }
 
         border-bottom-width: 2px;
@@ -742,10 +992,19 @@ export const CoursesSection = styled.div`
           font-weight: 500;
 
           margin-top: .6rem;
+          cursor: pointer;
+
+          @media (min-width: 1440px) {
+            font-size: 1.8rem;
+          }
         }
 
         p:nth-child(2) {
           margin-bottom: 3rem;
+
+          @media (min-width: 1440px) {
+            margin-bottom: 6rem;
+          }
         }
       }
     }
@@ -756,6 +1015,12 @@ export const CoursesSection = styled.div`
       margin-top: 1.9rem;
       padding: 0 2.4rem;
 
+      @media (min-width: 1440px) {
+        padding: 0 12.4rem;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
       a {
         text-decoration: none;
         color: white;
@@ -764,6 +1029,10 @@ export const CoursesSection = styled.div`
         font-weight: 500;
 
         margin-top: .6rem;
+
+        @media (min-width: 1440px) {
+          font-size: 1.4rem;
+        }
       }
     }
 `;
@@ -812,8 +1081,8 @@ export default function Home() {
         <div className="desktopSection">
           <h2 className={krona.className}>CONHEÇA A <br ></br> FACULDADE ÚNICA</h2>
         </div>
-
         <img className="bannerDesktop" src="/desktopBanner.png" alt="banner versão desktop" />
+
       </Section>
 
 
@@ -902,6 +1171,13 @@ export default function Home() {
             <PhotoCard image="/photo3.png" title="SEGUNDA GRADUAÇÃO" />
             <PhotoCard image="/photo4.png" title="DISCIPLINAS ISOLADAS" />
           </div>
+
+          <div className="desktopCardSection">
+            <PhotoCard image="/alunoDesk.png" title="GRADUAÇÃO" />
+            <PhotoCard image="/aluno2desk.png" title="PÕS ONLINE" />
+            <PhotoCard image="/aluno3desk.png" title="SEGUNDA GRADUAÇÃO" />
+            <PhotoCard image="/aluno4desk.png" title="DISCIPLINAS ISOLADAS" />
+          </div>
         </div>
       </EighthSection>
 
@@ -928,6 +1204,62 @@ export default function Home() {
         <img class="retangularView" src="/retangular.svg" alt="" />
 
       </FeedbackSection>
+
+      <DesktopFeedback>
+        <div className="feebackSection">
+          <div className="background1">
+            <img src="/vector.svg" alt="" />
+          </div>
+          <div className="background2">
+            <img src="/vector2.svg" alt="" />
+          </div>
+          <div className="feedbackTitle">
+            <h2 className={krona.className}>Lado a lado com a sua evolução</h2>
+          </div>
+          <div className="feedbackCards">
+            <DesktopCard video="/desktopCard.png" image="/student.png" name="PEDRO ALVARENGA ASSIS" course="Nome do curso" />
+            <DesktopCard video="/desktopCard.png" image="/student.png" name="PEDRO ALVARENGA ASSIS" course="Nome do curso" />
+            <DesktopCard video="/desktopCard.png" image="/student.png" name="PEDRO ALVARENGA ASSIS" course="Nome do curso" />
+          </div>
+        </div>
+      </DesktopFeedback>
+
+
+      <DesktopQuestions>
+        <div className="titleAndQuestions">
+          <h2 className={krona.className}>Perguntas Frequentes</h2>
+          <div className="FAQ">
+            <div className="questions">
+              <p className={poppins.className}>O que é Graduação?</p>
+              <img src="/x.svg" alt="" />
+            </div>
+            <div className="questions">
+              <p className={poppins.className}>Como funciona a Graduação EaD?</p>
+              <img src="/x.svg" alt="" />
+            </div>
+            <div className="questions">
+              <p className={poppins.className}>Por que fazer o EaD?</p>
+              <img src="/x.svg" alt="" />
+            </div>
+            <div className="questions">
+              <p className={poppins.className}>Qual faculdade EaD escolher?</p>
+              <img src="/x.svg" alt="" />
+            </div>
+            <div className="questions">
+              <p className={poppins.className}>Qual curso EaD fazer?</p>
+              <img src="/x.svg" alt="" />
+            </div>
+            <div className="questions">
+              <p className={poppins.className}>Quem faz EaD pode fazer mestrado?</p>
+              <img src="/x.svg" alt="" />
+            </div>
+            <div className="questions">
+              <p className={poppins.className}>Quem faz faculdade EaD tem formatura?</p>
+              <img src="/x.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </DesktopQuestions>
 
       <CoursesSection>
         <div className="sectionTitle">
@@ -1010,11 +1342,13 @@ export default function Home() {
           </div>
 
           <div className="afterCoursesList">
-            <h4 className={poppins.className}>Siga nossa faculdade:</h4>
-            <div className="iconsSection">
-              <img src="/facebook.svg" alt="" />
-              <img src="/instagram.svg" alt="" />
-              <img src="/youtube.svg" alt="" />
+            <div className="followUs">
+              <h4 className={poppins.className}>Siga nossa faculdade:</h4>
+              <div className="iconsSection">
+                <img src="/facebook.svg" alt="" />
+                <img src="/instagram.svg" alt="" />
+                <img src="/youtube.svg" alt="" />
+              </div>
             </div>
             <div className="appDownload">
               <h4 className={poppins.className}>Baixe nosso App:</h4>
@@ -1027,26 +1361,32 @@ export default function Home() {
               <h4 className={poppins.className}>Consulte aqui o cadastro da Instituição no Sistema e-MEC</h4>
               <img src="/mec.png" alt="" />
             </div>
+            <div className="mecSectionDesk">
+              <h4 className={poppins.className}>Consulte aqui o cadastro da Instituição no Sistema e-MEC</h4>
+              <img src="/mecdesk.png" alt="" />
+            </div>
           </div>
 
         </div>
         <div className="leanMore">
           <h4 className={poppins.className}>Saiba mais da Faculdade Única</h4>
-          <div className="learMoreCourse">
-            <h4 className={poppins.className}>Pós-Graduação</h4>
-            <p className={poppins.className}>Ver nossos cursos</p>
-          </div>
-          <div className="learMoreCourse">
-            <h4 className={poppins.className}>Segunda Graduação</h4>
-            <p className={poppins.className}>Ver nossos cursos</p>
-          </div>
-          <div className="learMoreCourse">
-            <h4 className={poppins.className}>Disciplinas Isoladas</h4>
-            <p className={poppins.className}>Ver nossos cursos</p>
-          </div>
-          <div className="learMoreCourse">
-            <h4 className={poppins.className}>Cursos Livres</h4>
-            <p className={poppins.className}>Ver nossos cursos</p>
+          <div className="learMoreContainer">
+            <div className="learMoreCourse">
+              <h4 className={poppins.className}>Pós-Graduação</h4>
+              <p className={poppins.className}>Ver nossos cursos</p>
+            </div>
+            <div className="learMoreCourse">
+              <h4 className={poppins.className}>Segunda Graduação</h4>
+              <p className={poppins.className}>Ver nossos cursos</p>
+            </div>
+            <div className="learMoreCourse">
+              <h4 className={poppins.className}>Disciplinas Isoladas</h4>
+              <p className={poppins.className}>Ver nossos cursos</p>
+            </div>
+            <div className="learMoreCourse">
+              <h4 className={poppins.className}>Cursos Livres</h4>
+              <p className={poppins.className}>Ver nossos cursos</p>
+            </div>
           </div>
         </div>
         <div className="aboutProminas">

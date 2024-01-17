@@ -19,6 +19,10 @@ export const Container = styled.div`
 
   p {
     font-size: .8rem;
+
+    @media (min-width: 1440px) {
+      font-size: 1.8rem;
+    }
   }
 
 `;

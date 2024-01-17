@@ -16,7 +16,6 @@ export const Container = styled.div`
   width: 100%;
   padding: 0 2.4rem;
 
-
   background-color: #0e1220;
 
   @media (min-width: 1440px) {
