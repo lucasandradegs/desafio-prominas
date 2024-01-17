@@ -14,6 +14,9 @@ export const Container = styled.div`
     .cardTitle {
         display: flex;
 
+        @media (min-width: 1440px) {
+        }
+
 
         h2 {
             margin-top: 10rem;
@@ -21,6 +24,15 @@ export const Container = styled.div`
             text-align: center;
             font-size: 1.2rem;
             z-index: 1;
+
+            @media (min-width: 1440px) {
+                margin-top: 22.9rem;
+                margin-left: 1.3rem;
+                margin-right: 1.3rem;
+
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
         }
 
         img {
@@ -29,6 +41,12 @@ export const Container = styled.div`
             border-radius: .4rem;
             z-index: 0;
         }
+    }
+
+    @media (min-width: 1440px) {
+        width: 28.4rem;
+        height: 34.9rem;
+
     }
 `;
 

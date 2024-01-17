@@ -18,10 +18,34 @@ export const Container = styled.div`
 
     .cardStyle {
         position: absolute;
+
+        @media (max-width: 1439px) {
+            .desktopV {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .mobileV {
+                display: none;
+            }
+        }
     }
 
     .cardStyle2 {
         position: absolute;
+
+        @media (max-width: 1439px) {
+            .desktopU {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .mobileU {
+                display: none;
+            }
+        }
     }
 
     .cardTitle {
@@ -31,6 +55,10 @@ export const Container = styled.div`
             margin-top: 9.6rem;
 
             font-size: 2.5rem;
+
+            @media (min-width: 1440px) {
+                font-size: 3rem;
+            }
         }
 
         p {
@@ -38,6 +66,11 @@ export const Container = styled.div`
             margin-top: 1.2rem;
             line-height: 26px;
             font-size: 2rem;
+
+            @media (min-width: 1440px) {
+                font-size: 2.2rem;
+                line-height: 28.6px;
+            }
         }
 
         .titleAndImage {
@@ -48,6 +81,11 @@ export const Container = styled.div`
             border-radius: 0 0 0 10rem;
         }
     }
+
+    @media (min-width: 1440px) {
+        width: 38.4rem;
+        height: 63rem;
+    }
 `;
 
 export function BlueCard({ image, title, subtitle }) {
@@ -55,10 +93,12 @@ export function BlueCard({ image, title, subtitle }) {
         <Container>
             <div className="cardTitle">
                 <div className="cardStyle">
-                    <img src="/v.svg" alt="" />
+                    <img className="mobileV" src="/v.svg" alt="" />
+                    <img className="desktopV" src="/vdesk.svg" alt="" />
                 </div>
                 <div className="cardStyle2">
-                    <img src="/u.svg" alt="" />
+                    <img className="mobileU" src="/u.svg" alt="" />
+                    <img className="desktopU" src="/udesk.svg" alt="" />
                 </div>
                     <img src={image} alt="Imagem do card" />
                 <div className="titleAndImage">

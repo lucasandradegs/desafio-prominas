@@ -9,6 +9,7 @@ import { PhotoCard } from "../components/photoCard"
 import { LiaSearchSolid } from "react-icons/lia";
 import { Krona_One, Poppins } from 'next/font/google'
 import { Footer } from "../components/footer"
+import Image from "next/image";
 
 const krona = Krona_One({ weight: '400', style: 'normal', subsets: ['latin'] })
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
@@ -18,6 +19,27 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
+
+  .desktopBackground {
+    @media (min-width: 1440px) {
+      height: 80.9rem;
+  
+      img:nth-child(1) {
+        position: absolute;
+      }
+
+      .bannerMobile {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1439px) {
+      img:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+  
 `;
 
 export const Content = styled.div`
@@ -40,7 +62,67 @@ export const Content = styled.div`
     input {
       margin-top: 1.4rem;
     }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+
   }
+
+  .desktopContent {
+
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    input {
+      width: 35rem;
+      height: 4.8rem;
+    }
+
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9.1rem;
+
+    background: rgba(73, 73, 73, 0.40);
+
+    padding: 0 12.4rem;
+
+    position: absolute;
+
+    .menuOptions {
+      display: flex;
+      align-items: center;
+      gap: 1.9rem;
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      button {
+        width: 17.8rem;
+        height: 3.9rem;
+        
+        margin-left: 2.1rem;
+        font-size: 1.2rem;
+        border: 1px solid #FFF;
+        border-radius: .3rem;
+        background-color: transparent;
+        color: #FFF;
+      }
+    }
+  }
+
 
 `;
 
@@ -69,7 +151,40 @@ export const Section = styled.div`
       font-size: 2.2rem;
     }
   }
-}
+
+  @media (min-width: 1040px) {
+    display: none;
+  }
+  }
+
+
+  .bannerMobile {
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  .bannerDesktop {
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+
+  .desktopSection {
+    padding: 0 12.4rem;
+    position: absolute;
+
+    h2 {
+      margin-top: 45rem;
+      font-size: 6rem;
+    }
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+
+
 `;
 
 export const SecondSection = styled.div`
@@ -87,10 +202,41 @@ export const SecondSection = styled.div`
         font-weight: 600;
         font-size: 2rem;
       }
+
+      @media (min-width: 1440px) {
+        display: none;
+      }
     }
 
     img {
       width: 100%;
+    }
+
+    img:nth-child(2) {
+      @media (min-width: 1440px) {
+        display: none;
+      }
+    }
+
+    .desktopSection {
+      position: absolute;
+
+      h2 {
+        font-size: 3.2rem;
+        margin-top: 8rem;
+        margin-left: 47rem;
+        font-weight: 600;
+      }
+
+      @media (max-width: 1439px) {
+        display: none;
+      }
+    }
+
+    .desktopBanner {
+      @media (max-width: 1439px) {
+        display: none;
+      }
     }
 
 `;
@@ -106,13 +252,27 @@ export const ThirdSection = styled.div`
 
         h2 {
           font-size: 2rem;
+
+          @media (min-width: 1440px) {
+            font-size: 3.2rem;
+          }
         }
 
         p {
           text-align: center;
           margin-top: 2.6rem;
           font-size: 1.5rem;
+
+          @media (min-width: 1440px) {
+            font-size: 2.2rem;
+            font-weight: 500;
+          }
         }
+    }
+
+    @media (min-width: 1440px) {
+      padding: 0 12.4rem;
+      margin-top: 5rem;
     }
 `;
 
@@ -121,10 +281,22 @@ export const CardSection = styled.div`
     margin-top: 4.8rem;
 
     .cardDisplay {
-      :nth-child(2), :nth-child(3) {
-        margin-top: 3.6rem;
+      @media (max-width: 1439px) {
+        :nth-child(2), :nth-child(3) {
+          margin-top: 3.6rem;
+        }
       }
     }
+
+    @media (min-width: 1440px) {
+        padding: 0 12.4rem;
+        margin-top: 7.1rem;
+        
+        .cardDisplay {
+          display: flex;
+          gap: 2rem;
+        }
+      }
 `;
 
 export const FifthSection = styled.div`
@@ -139,6 +311,11 @@ export const FifthSection = styled.div`
       h2 {
         text-align: center;
         font-size: 2rem;
+
+        @media (min-width: 1440px) {
+          text-align: start;
+          font-size: 3.2rem;
+        }
       }
 
       p {
@@ -147,11 +324,45 @@ export const FifthSection = styled.div`
         font-weight: 500;
 
         margin-top: 3rem;
+
+        @media (min-width: 1440px) {
+          text-align: start;
+          font-size: 2.2rem;
+        }
       }
 
       img {
         margin-top: 3.4rem;
       }
+
+      .desktopTitle {
+        @media (min-width: 1440px) {
+          display: flex;
+          flex-direction: column;
+
+          width: 58.7rem;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .mobileNotebook {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 1439px) {
+      .desktopNotebook {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      padding: 0 12.4rem;
     }
 `;
 
@@ -163,6 +374,10 @@ export const SixthSection = styled.div`
   h2 {
     text-align: center;
     font-size: 2rem;
+
+    @media (min-width: 1440px) {
+      font-size: 3.2rem;
+    }
   }
 
   .cardWithTitle {
@@ -170,6 +385,10 @@ export const SixthSection = styled.div`
     justify-content: center;
     gap: 2rem;
     margin-top: 3.2rem;
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
   }
 
   .cardsDots {
@@ -177,6 +396,31 @@ export const SixthSection = styled.div`
     justify-content: center;
 
     margin-top: 1.9rem;
+
+    .dotsMobile {
+      @media (min-width: 1440px) {
+        display: none;
+      }
+    }
+
+    .dotsDesktop {
+      margin-top: 3.5rem;
+
+      @media (max-width: 1439px) {
+        display: none;
+      }
+    }
+  }
+
+  .cardWithTitleDesktop {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-top: 6.5rem;
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
   }
 `;
 
@@ -188,6 +432,10 @@ export const SeventhSection = styled.div`
     font-size: 2rem;
 
     text-align: center;
+
+    @media (min-width: 1440px) {
+      font-size: 3.2rem;
+    }
   }
 
   .cardWithTitle {
@@ -196,6 +444,30 @@ export const SeventhSection = styled.div`
     align-items: center;
     margin-top: 5.2rem;
 
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  .cardWithTitleDesktop {
+    margin-top: 7rem;
+    
+    @media (min-width: 1440px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    padding: 0 12.4rem;
+    margin-top: 13rem;
   }
 `;
 
@@ -499,6 +771,7 @@ export const CoursesSection = styled.div`
 export default function Home() {
   return (
     <Container>
+
       <Header />
 
       <Content>
@@ -508,6 +781,22 @@ export default function Home() {
             placeholder="Pesquise por um curso"
           />
         </div>
+
+        <div className="desktopContent">
+
+          <img src="/desktopLogo.svg" alt="" />
+          <Input
+            placeholder="Pesquise por um curso"
+          />
+          <div className="menuOptions">
+            <p className={poppins.className}>Nossas Áreas</p>
+            <p className={poppins.className}>Vidas transformadas</p>
+            <p className={poppins.className}>Blog</p>
+            <p className={poppins.className}>FAQ</p>
+            <button className={krona.className}>JÁ SOU ALUNO</button>
+          </div>
+
+        </div>
       </Content>
 
       <Section>
@@ -516,15 +805,29 @@ export default function Home() {
             <h1 className={krona.className}>CONHEÇA A FACULDADE ÚNICA</h1>
             <p className={poppins.className}>Criando hoje o seu amanhã.</p>
           </div>
-          <img src="/background.png" alt="" />
+          <img className="bannerMobile" src="/background.png" alt="" />
         </div>
+
+
+        <div className="desktopSection">
+          <h2 className={krona.className}>CONHEÇA A <br ></br> FACULDADE ÚNICA</h2>
+        </div>
+
+        <img className="bannerDesktop" src="/desktopBanner.png" alt="banner versão desktop" />
       </Section>
+
+
 
       <SecondSection>
         <div className="imageMsg">
           <h2 className={poppins.className}>CRIANDO HOJE SEU AMANHÃ!</h2>
         </div>
-        <img src="/mensagem.png" alt="" />
+        <img className="mobileBanner" src="/mensagem.png" alt="" />
+
+        <div className="desktopSection">
+          <h2 className={poppins.className}>CRIANDO HOJE O SEU AMANHÃ!</h2>
+        </div>
+        <img className="desktopBanner" src="/blackDesktop.png" alt="" />
       </SecondSection>
 
       <ThirdSection>
@@ -544,9 +847,12 @@ export default function Home() {
 
       <FifthSection>
         <div className="fifthSectionTitle">
-          <h2 className={krona.className}>Construa seu amanhã conosco</h2>
-          <p className={poppins.className}>Com foco em inovação e qualidade, seja nos cursos presenciais ou online, utilizamos as mais modernas tecnologias para uma comunicação mais eficiente e eficaz entre professor e aluno, destinados à formação de profissionais qualificados, capazes de transformar a realidade socioeconômica do país.</p>
-          <img src="/notebook.png" alt="" />
+          <div className="desktopTitle">
+            <h2 className={krona.className}>Construa seu amanhã conosco</h2>
+            <p className={poppins.className}>Com foco em inovação e qualidade, seja nos cursos presenciais ou online, utilizamos as mais modernas tecnologias para uma comunicação mais eficiente e eficaz entre professor e aluno, destinados à formação de profissionais qualificados, capazes de transformar a realidade socioeconômica do país.</p>
+          </div>
+          <img className="mobileNotebook" src="/notebook.png" alt="" />
+          <img className="desktopNotebook" src="/notebookDkt.png" alt="" />
         </div>
       </FifthSection>
 
@@ -557,8 +863,15 @@ export default function Home() {
             <img src="/card1.png" alt="" />
             <BackgroundCard image="/card2.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
           </div>
+          <div className="cardWithTitleDesktop">
+            <BackgroundCard image="/card1desk.png" title="Cursos com nota máxima na avaliação do MEC" />
+            <BackgroundCard image="/card2desk.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
+            <BackgroundCard image="/card3desk.png" title="Estágio remunerado desde os primeiros períodos" />
+            <BackgroundCard image="/card4desk.png" title="Professores mestres e doutores" />
+          </div>
           <div className="cardsDots">
-            <img src="/dots.svg" alt="" />
+            <img className="dotsMobile" src="/dots.svg" alt="" />
+            <img className="dotsDesktop" src="/dotsdesk.svg" alt="" />
           </div>
         </div>
       </SixthSection>
@@ -570,6 +883,11 @@ export default function Home() {
             <BlueCard image="/missao.png" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
             <BlueCard image="/visao.png" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
             <BlueCard image="/valores.png" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
+          </div>
+          <div className="cardWithTitleDesktop">
+            <BlueCard image="/missaodesk.png" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
+            <BlueCard image="/visaodesk.png" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
+            <BlueCard image="/valoresdesk.png" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
           </div>
         </div>
       </SeventhSection>

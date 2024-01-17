@@ -8,9 +8,13 @@ const poppins = Poppins({ weight: '400', style: 'normal', subsets: ['latin'] })
 
 
 export const Container = styled.div`
-    width: 100%;
+    
     display: flex;
     align-items: center;
+
+    @media (max-width: 1439px) {
+        width: 100%;
+    }
 
 
     > input {

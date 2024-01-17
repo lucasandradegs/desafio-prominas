@@ -30,6 +30,11 @@ export const Container = styled.div`
         font-size: 2.2rem;
         margin-top: 4.9rem;
     }
+
+    @media (min-width: 1440px) {
+        width: 38.4rem;
+        height: 27.3rem;
+    }
 `;
 
 export function Card({ image, title }) {
