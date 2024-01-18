@@ -31,7 +31,6 @@ export const Container = styled.div`
             }
 
             h2 {
-                width: 270px;
                 margin-top: 27.8rem;
                 text-transform: uppercase;
                 font-size: 1.6rem;
