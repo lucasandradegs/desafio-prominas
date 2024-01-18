@@ -11,16 +11,21 @@ const StyledApp = styled.div`
 
   color: ${(props) => props.theme.fontColor};
 
-  button, label {
+  button:nth-child(1) {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    right: 19px;
-    top: 2px;
+    width: 3rem;
+    height: 3rem;
+    right: 1.9rem;
+    top: .2rem;
     opacity: 0.2;
     cursor: pointer; 
     background: none; 
-    border: none; 
+    border: none;
+
+    @media (min-width: 1440px) {
+      top: 1.4rem;
+      right: 11.9rem;
+    }
   }
 `;
 

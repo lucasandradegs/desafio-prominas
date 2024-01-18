@@ -20,7 +20,7 @@ export const Container = styled.div`
 
     &:hover {
         transform: scale(1.05); 
-        background-color: #052d79; 
+        background-color: ${(props) => props.theme.body === '#000' ? '#000' : '#052d79'};; 
     }
 
     .cardStyle {

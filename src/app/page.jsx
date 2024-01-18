@@ -197,6 +197,10 @@ const Section = styled.div`
     @media (max-width: 1439px) {
       display: none;
     }
+
+    @media (min-width: 1700px) {
+            padding: 0 22.5rem;
+          }
   }
 
 
@@ -218,6 +222,11 @@ const SecondSection = styled.div`
         font-size: 2rem;
 
         color: #fff;
+
+        @media (min-width: 425px) {
+          margin-top: 7rem;
+          margin-left: 7rem;
+        }
       }
 
       @media (min-width: 1440px) {
@@ -240,7 +249,7 @@ const SecondSection = styled.div`
 
       h2 {
         font-size: 3.2rem;
-        margin-top: 11.2rem;
+        margin-top: 9.2rem;
         margin-left: 47rem;
         font-weight: 600;
 
@@ -287,10 +296,16 @@ const ThirdSection = styled.div`
           font-size: 1.5rem;
           font-weight: 500;
           line-height: 1.95rem;
-
+          
           @media (min-width: 1440px) {
             font-size: 2.2rem;
             font-weight: 500;
+            line-height: 2.86rem;
+            
+          }
+          
+          @media (min-width: 1700px) {
+            padding: 0 14.5rem;
           }
         }
     }
@@ -373,7 +388,7 @@ const FifthSection = styled.div`
       @media (min-width: 1440px) {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
 
         .mobileNotebook {
           display: none;
@@ -541,7 +556,6 @@ const EighthSection = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 8rem;
-
 
     @media (max-width: 1439px) {
       display: none;
@@ -760,7 +774,7 @@ const DesktopQuestions = styled.div`
           
           border-bottom-width: 2px;
           border-bottom-style: solid;
-          border-bottom-color: white;
+          border-bottom-color: ${(props) => props.theme.body === '#000' ? '#fff' : '#000'};
           
           p {
             cursor: pointer;
@@ -772,6 +786,11 @@ const DesktopQuestions = styled.div`
 
           img {
             cursor: pointer;
+            fill: red;
+          }
+
+          svg {
+            fill: red;
           }
         }
 

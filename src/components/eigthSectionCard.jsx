@@ -27,7 +27,11 @@ export const Container = styled.div`
             justify-content: center;
             align-items: center;
 
+            @media (min-width: 1440px) {
+            }
+
             h2 {
+                width: 270px;
                 margin-top: 27.8rem;
                 text-transform: uppercase;
                 font-size: 1.6rem;
