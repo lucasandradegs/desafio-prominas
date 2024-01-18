@@ -16,7 +16,7 @@ import { api } from "../app/services/api"
 const krona = Krona_One({ weight: '400', style: 'normal', subsets: ['latin'] })
 const poppins = Poppins({ weight: '400', style: 'normal', subsets: ['latin'] })
 
-export const Container = styled.div`
+const Container = styled.div`
   width: 100%;
   height: 100%;
 
@@ -43,7 +43,7 @@ export const Container = styled.div`
   
 `;
 
-export const Content = styled.div`
+const Content = styled.div`
   width: 100%;
   height: 4.8rem;
 
@@ -135,7 +135,7 @@ export const Content = styled.div`
 
 `;
 
-export const Section = styled.div`
+const Section = styled.div`
   .imageAndTitle {
 
     display: flex;
@@ -202,7 +202,7 @@ export const Section = styled.div`
 
 `;
 
-export const SecondSection = styled.div`
+const SecondSection = styled.div`
     position: relative;
     top: -3vh;
 
@@ -264,7 +264,7 @@ export const SecondSection = styled.div`
 
 `;
 
-export const ThirdSection = styled.div`
+const ThirdSection = styled.div`
     padding: 0 3.5rem;
 
     .sectionTitle {
@@ -301,7 +301,7 @@ export const ThirdSection = styled.div`
     }
 `;
 
-export const CardSection = styled.div`
+const CardSection = styled.div`
     padding: 0 2.4rem;
     margin-top: 4.8rem;
 
@@ -325,7 +325,7 @@ export const CardSection = styled.div`
       }
 `;
 
-export const FifthSection = styled.div`
+const FifthSection = styled.div`
     margin-top: 9rem;
     padding: 0 2.4rem;
 
@@ -392,7 +392,7 @@ export const FifthSection = styled.div`
     }
 `;
 
-export const SixthSection = styled.div`
+const SixthSection = styled.div`
   padding: 0 2.4rem;
   margin-top: 9.6rem;
 
@@ -452,7 +452,7 @@ export const SixthSection = styled.div`
   }
 `;
 
-export const SeventhSection = styled.div`
+const SeventhSection = styled.div`
   padding: 0 2.4rem;
   margin-top: 10.3rem;
 
@@ -499,7 +499,7 @@ export const SeventhSection = styled.div`
   }
 `;
 
-export const EighthSection = styled.div`
+const EighthSection = styled.div`
   margin-top: 9rem;
 
   .eighthSectionTitle {
@@ -549,7 +549,7 @@ export const EighthSection = styled.div`
   }
 `;
 
-export const FeedbackSection = styled.div`
+const FeedbackSection = styled.div`
     background: linear-gradient(90deg, #7500FF 10.24%, #7500FF 14.24%, #A68BFF 110.24%);
 
     border-bottom-width: 10.5rem;
@@ -681,7 +681,7 @@ export const FeedbackSection = styled.div`
 }
 `;
 
-export const DesktopFeedback = styled.div`
+const DesktopFeedback = styled.div`
     height: 612px;
     background: linear-gradient(90deg, #7500FF 10.24%, #7500FF 14.24%, #A68BFF 110.24%);
 
@@ -730,7 +730,7 @@ export const DesktopFeedback = styled.div`
 
 `;
 
-export const DesktopQuestions = styled.div`
+const DesktopQuestions = styled.div`
     padding: 0 12.4rem;
 
     @media (max-width: 1439px) {
@@ -779,7 +779,7 @@ export const DesktopQuestions = styled.div`
     }
 `;
 
-export const CoursesSection = styled.div`
+const CoursesSection = styled.div`
     margin-bottom: 6.4rem;
 
     .sectionTitle {
@@ -1233,7 +1233,7 @@ export default function Home() {
         <img className="rightArrow" src="/rightArrow.svg" alt="" />
         <div className="feedbackMessage">
           <div className="messageAndGoogle">
-            <p className={poppins.className}>"{data}"</p>
+            <p className={poppins.className}>{data}</p>
             <div className="photoAndName">
               <img src="/aluno2.png" alt="" />
               <div className="textContainer">
