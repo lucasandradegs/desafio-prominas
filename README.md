@@ -1,3 +1,65 @@
+# 🌟 Desafio técnico: Landing Page Prominas 🌐
+
+Este projeto foi desenvolvido como parte do desafio técnico de criar uma página de apresentação, responsiva, utilizando NextJS, integrando uma API e utilizando o banco de dados MongoDB.
+
+## 🚀 Início
+
+Siga os passos abaixo para começar a trabalhar no projeto:
+
+1. **Clone o repositório:**
+
+```bash
+   git clone https://github.com/lucasandradegs/desafio-prominas.git
+   cd desafio-prominas
+````
+Instale as dependências:
+
+ ```bash
+npm install
+```
+
+Configure as variáveis de ambiente.
+
+Rodando a aplicação:
+
+```bash
+npm run dev
+```
+
+Acesse a Landing Page:
+
+http://localhost:3000.
+
+
+<h2>🛠️ Tecnologias Utilizadas </h2>
+
+NextJS - O framework React para produção.
+
+MongoDB - Banco de dados NoSQL.
+
+📄 Estrutura do Projeto
+```plaintext
+
+.
+├── app/                # Páginas do NextJS
+├── components/         # Componentes React reutilizáveis
+├── styles/             # Estilos globais e estilização
+├── api/                # Funções da API integradas com NextJS
+├── public/             # Arquivos estáticos
+├── libs/               # Configuração do MongoDB
+├── models/             # Estrutura da tabela utilizada
+└── ...
+```
+
+<h2>Deploy do projeto</h2>
+
+https://desafio-prominas.vercel.app/
+
+<br>
+<br>
+<br>
+<br>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
