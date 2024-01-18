@@ -62,8 +62,8 @@ export const Container = styled.div`
 
 `;
 
-export function Header() {
 
+export function Header() {
     return (
         <Container>
             <div className="topSideMobile">
