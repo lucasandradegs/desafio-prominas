@@ -199,7 +199,8 @@ const Section = styled.div`
     }
 
     @media (min-width: 1700px) {
-            padding: 0 22.5rem;
+            margin-top: 6rem;
+            padding: 0 23.5rem;
           }
   }
 
@@ -256,7 +257,7 @@ const SecondSection = styled.div`
         color: #fff;
 
         @media (min-width: 1500px) {
-          margin-left: 62rem;
+          margin-left: 71rem;
         }
       }
 
@@ -305,7 +306,7 @@ const ThirdSection = styled.div`
           }
           
           @media (min-width: 1700px) {
-            padding: 0 14.5rem;
+            padding: 0 15.9rem;
           }
         }
     }
