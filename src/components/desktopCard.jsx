@@ -19,8 +19,8 @@ export const Container = styled.div`
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
     &:hover {
-        transform: scale(1.05); /* Ajuste o valor conforme necessário */
-        box-shadow: 15px 15px 30px 0px rgba(0, 0, 0, 0.3); /* Efeito de sombra ao passar o mouse */
+        transform: scale(1.05); 
+        box-shadow: 15px 15px 30px 0px rgba(0, 0, 0, 0.3);
     }
 
     .cardTitle  {
@@ -36,7 +36,7 @@ export const Container = styled.div`
             transition: transform 0.3s ease-in-out;
 
             &:hover {
-                transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+                transform: scale(1.1); 
             }
         }
 
@@ -47,7 +47,7 @@ export const Container = styled.div`
             transition: opacity 0.3s ease-in-out;
 
             &:hover {
-                opacity: 0.8; /* Reduz a opacidade ao passar o mouse */
+                opacity: 0.8;
             }
         }
 
@@ -62,7 +62,7 @@ export const Container = styled.div`
                 transition: transform 0.3s ease-in-out;
 
                 &:hover {
-                    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+                    transform: scale(1.1);
                 }
             }
         }

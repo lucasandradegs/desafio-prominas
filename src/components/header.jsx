@@ -19,6 +19,11 @@ export const Container = styled.div`
 
   background-color: #0e1220;
 
+  @media (min-width: 1024px) {
+    height: 5.9rem;
+    padding: 0 9.2rem;
+  }
+
   @media (min-width: 1440px) {
     height: 5.9rem;
     padding: 0 12.3rem;
@@ -37,6 +42,10 @@ export const Container = styled.div`
     @media (min-width: 1440px) {
       display: none;
     }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
   }
 
   .topSideDesktop {
@@ -52,12 +61,15 @@ export const Container = styled.div`
       cursor: pointer;
     }
 
-
     @media (max-width: 1439px) {
-      display: none;
+      p {
+        font-size: 1.2rem;
+      }
     }
 
-    
+    @media (max-width: 1023px) {
+      display: none;
+    }
   }
 
 `;

@@ -20,11 +20,20 @@ export const Container = styled.div`
   p {
     font-size: .8rem;
     color: #fff;
+    
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      font-size: 1.4rem;
+    }
 
     @media (min-width: 1440px) {
       font-size: 1.8rem;
     }
   }
+
+  @media (min-width: 1024px) and (max-width: 1439px) {
+      margin-top: 14rem;
+      height: 12rem;
+    }
 
   @media (min-width: 1440px) {
     margin-top: 19rem;

@@ -64,7 +64,7 @@ const Content = styled.div`
       margin-top: 1.4rem;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
       display: none;
     }
 
@@ -86,11 +86,64 @@ const Content = styled.div`
       height: 4.8rem;
     }
 
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      width: 100%;
 
-    @media (max-width: 1439px) {
+      input {
+        width: 20rem;
+        height: 2.5rem;
+      }
+
+      img {
+        cursor: pointer;
+        width: 8.8rem;
+      }
+    }
+
+    @media (max-width: 1023px) {
       display: none;
     }
 
+  }
+
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    display: flex;
+    align-items: center;
+
+    background: rgba(73, 73, 73, 0.40);
+
+    padding: 0 9.2rem;
+
+    position: absolute;
+
+    .menuOptions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      width: 2000px;
+
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button {
+        width: 13.8rem;
+        height: 1.9rem;
+      
+        font-size: 0.8rem;
+        border: 1px solid #FFF;
+        border-radius: .3rem;
+        background-color: transparent;
+        color: #FFF;
+      }
+    }
   }
 
   @media (min-width: 1440px) {
@@ -163,14 +216,14 @@ const Section = styled.div`
     }
   }
 
-  @media (min-width: 1040px) {
+  @media (min-width: 1000px) {
     display: none;
   }
   }
 
 
   .bannerMobile {
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
       display: none;
     }
   }
@@ -179,7 +232,7 @@ const Section = styled.div`
     width: 100%;
     z-index: 0;
 
-    @media (max-width: 1439px) {
+    @media (max-width: 1023px) {
       display: none;
     }
   }
@@ -194,7 +247,16 @@ const Section = styled.div`
       color: #fff;
     }
 
-    @media (max-width: 1439px) {
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      padding: 0 9.2rem;
+
+      h2 {
+        margin-top: 30rem;
+        font-size: 4.5rem;
+      }
+    }
+
+    @media (max-width: 1023px) {
       display: none;
     }
 
@@ -230,7 +292,7 @@ const SecondSection = styled.div`
         }
       }
 
-      @media (min-width: 1440px) {
+      @media (min-width: 1024px) {
         display: none;
       }
     }
@@ -240,7 +302,7 @@ const SecondSection = styled.div`
     }
 
     img:nth-child(2) {
-      @media (min-width: 1440px) {
+      @media (min-width: 1024px) {
         display: none;
       }
     }
@@ -256,18 +318,24 @@ const SecondSection = styled.div`
 
         color: #fff;
 
+        @media (min-width: 1024px) and (max-width: 1439px) {
+          font-size: 2.6rem;
+          margin-top: 5.5rem;
+          margin-left: 33rem;
+        }
+
         @media (min-width: 1500px) {
           margin-left: 71rem;
         }
       }
 
-      @media (max-width: 1439px) {
+      @media (max-width: 1023px) {
         display: none;
       }
     }
 
     .desktopBanner {
-      @media (max-width: 1439px) {
+      @media (max-width: 1023px) {
         display: none;
       }
     }
@@ -286,6 +354,10 @@ const ThirdSection = styled.div`
         h2 {
           font-size: 2rem;
 
+          @media (min-width: 1024px) and (max-width: 1439px) {
+            font-size: 2.4rem;
+          }
+
           @media (min-width: 1440px) {
             font-size: 3.2rem;
           }
@@ -297,12 +369,16 @@ const ThirdSection = styled.div`
           font-size: 1.5rem;
           font-weight: 500;
           line-height: 1.95rem;
+
+          @media (min-width: 1024px) and (max-width: 1439px) {
+            padding: 0 7.2rem;
+            font-size: 1.8rem;
+          }
           
           @media (min-width: 1440px) {
             font-size: 2.2rem;
             font-weight: 500;
             line-height: 2.86rem;
-            
           }
           
           @media (min-width: 1700px) {
@@ -322,14 +398,14 @@ const CardSection = styled.div`
     margin-top: 4.8rem;
 
     .cardDisplay {
-      @media (max-width: 1439px) {
+      @media (max-width: 1023px) {
         :nth-child(2), :nth-child(3) {
           margin-top: 3.6rem;
         }
       }
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
         padding: 0 12.4rem;
         margin-top: 7.1rem;
         
@@ -354,6 +430,11 @@ const FifthSection = styled.div`
         text-align: center;
         font-size: 2rem;
 
+        @media (min-width: 1024px) and (max-width: 1439px) {
+          text-align: start;
+          font-size: 2.5rem;
+        }
+
         @media (min-width: 1440px) {
           text-align: start;
           font-size: 3.2rem;
@@ -367,6 +448,11 @@ const FifthSection = styled.div`
 
         margin-top: 3rem;
 
+        @media (min-width: 1024px) and (max-width: 1439px) {
+          text-align: start;
+          font-size: 1.8rem;
+        }
+
         @media (min-width: 1440px) {
           text-align: start;
           font-size: 2.2rem;
@@ -377,8 +463,15 @@ const FifthSection = styled.div`
         margin-top: 3.4rem;
       }
 
+      @media (min-width: 1024px) and (max-width: 1439px) {
+        img {
+          margin-top: 8rem;
+          width: 40rem;
+        }
+      }
+
       .desktopTitle {
-        @media (min-width: 1440px) {
+        @media (min-width: 1024px) {
           display: flex;
           flex-direction: column;
 
@@ -386,7 +479,7 @@ const FifthSection = styled.div`
         }
       }
 
-      @media (min-width: 1440px) {
+      @media (min-width: 1024px) {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -397,10 +490,14 @@ const FifthSection = styled.div`
       }
     }
 
-    @media (max-width: 1439px) {
+    @media (max-width: 1023px) {
       .desktopNotebook {
         display: none;
       }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      padding: 0 9.2rem;
     }
 
     @media (min-width: 1440px) {
@@ -412,10 +509,17 @@ const SixthSection = styled.div`
   padding: 0 2.4rem;
   margin-top: 9.6rem;
 
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    padding: 0 9.2rem;
+  }
 
   h2 {
     text-align: center;
     font-size: 2rem;
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      font-size: 2.4rem;
+    }
 
     @media (min-width: 1440px) {
       font-size: 3.2rem;
@@ -428,7 +532,7 @@ const SixthSection = styled.div`
     gap: 2rem;
     margin-top: 3.2rem;
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
       display: none;
     }
   }
@@ -440,7 +544,7 @@ const SixthSection = styled.div`
     margin-top: 1.9rem;
 
     .dotsMobile {
-      @media (min-width: 1440px) {
+      @media (min-width: 1024px) {
         display: none;
       }
     }
@@ -450,7 +554,7 @@ const SixthSection = styled.div`
 
       cursor: pointer;
 
-      @media (max-width: 1439px) {
+      @media (max-width: 1023px) {
         display: none;
       }
     }
@@ -462,7 +566,11 @@ const SixthSection = styled.div`
     gap: 1.8rem;
     margin-top: 6.5rem;
 
-    @media (max-width: 1439px) {
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      gap: 3rem;
+    }
+
+    @media (max-width: 1023px) {
       display: none;
     }
   }
@@ -477,6 +585,10 @@ const SeventhSection = styled.div`
 
     text-align: center;
 
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      font-size: 2.4rem;
+    }
+
     @media (min-width: 1440px) {
       font-size: 3.2rem;
     }
@@ -487,6 +599,14 @@ const SeventhSection = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 5.2rem;
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+    }
 
 
     @media (min-width: 1440px) {
@@ -523,6 +643,10 @@ const EighthSection = styled.div`
     h2 {
       text-align: center;
       font-size: 2rem;
+
+      @media (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 2.4rem;
+      }
 
       @media (min-width:1440px) {
         font-size: 3.2rem;
@@ -577,7 +701,7 @@ const FeedbackSection = styled.div`
 
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
       display: none;
     }
 
@@ -702,7 +826,11 @@ const DesktopFeedback = styled.div`
 
     padding: 0 12.4rem;
 
-    @media (max-width: 1439px) {
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      padding: 0 9.2rem;
+    }
+
+    @media (max-width: 1023px) {
       display: none;
     }
 
@@ -748,7 +876,7 @@ const DesktopFeedback = styled.div`
 const DesktopQuestions = styled.div`
     padding: 0 12.4rem;
 
-    @media (max-width: 1439px) {
+    @media (max-width: 1023px) {
       display: none;
     }
 
@@ -787,11 +915,6 @@ const DesktopQuestions = styled.div`
 
           img {
             cursor: pointer;
-            fill: red;
-          }
-
-          svg {
-            fill: red;
           }
         }
 
@@ -805,6 +928,10 @@ const CoursesSection = styled.div`
     .sectionTitle {
       padding: 0 2.4rem;
 
+      @media (min-width: 1023px) and (max-width: 1439px) {
+        padding: 0 9.2rem;
+      }
+
       @media (min-width: 1440px) {
         padding: 0 12.4rem;
       }
@@ -813,6 +940,11 @@ const CoursesSection = styled.div`
         font-size: 1.2rem;
         font-weight: 700;
         margin-top: 2.1rem;
+
+        @media (min-width: 1024px) and (max-width: 1439px) {
+          font-size: 1.8rem;
+          margin-top: 8rem;
+        }
 
         @media (min-width: 1440px) {
           font-size: 2rem;
@@ -827,7 +959,7 @@ const CoursesSection = styled.div`
         gap: 2rem;
 
 
-        @media (min-width: 1440px) {
+        @media (min-width: 1024px) {
           display: flex;
           flex-wrap: nowrap;
           justify-content: center;
@@ -840,7 +972,7 @@ const CoursesSection = styled.div`
           margin-top: 2.7rem;
           list-style-type: none;
 
-          @media (min-width: 1440px) {
+          @media (min-width: 1024px) {
             margin-top: 0;
             width: 24.2rem;
           }
@@ -853,7 +985,7 @@ const CoursesSection = styled.div`
 
           cursor: pointer;
 
-          @media (min-width: 1440px) {
+          @media (min-width: 1024px) {
             font-size: 1.2rem;
             line-height: 3.5rem;
           }
@@ -864,7 +996,7 @@ const CoursesSection = styled.div`
           margin-top: 2.7rem;
           list-style-type: none;
 
-          @media (min-width: 1440px) {
+          @media (min-width: 1024px) {
             margin-top: 0;
             width: 24.2rem;
           }
@@ -878,7 +1010,7 @@ const CoursesSection = styled.div`
 
           cursor: pointer;
 
-          @media (min-width: 1440px) {
+          @media (min-width: 1024px) {
             font-size: 1.2rem;
             line-height: 3.5rem;
           }
@@ -887,7 +1019,7 @@ const CoursesSection = styled.div`
          .courseList2:nth-child(4) {
           margin-top: 8.9rem;
 
-          @media (min-width: 1440px) {
+          @media (min-width: 1024px) {
             margin-top: 0;
           }
          }
@@ -895,7 +1027,7 @@ const CoursesSection = styled.div`
          .courseList:nth-child(5) {
           margin-top: 2rem;
 
-          @media (min-width: 1440px) {
+          @media (min-width: 1024px) {
             margin-top: 0;
           }
          }
@@ -904,17 +1036,22 @@ const CoursesSection = styled.div`
 
        .afterCoursesList {
 
-        @media (min-width: 1440px) {
+        @media (min-width: 1024px) {
           display: flex;
           justify-content: space-between;
           align-items: normal;
           width: 100%;
           margin-bottom: 4.3rem;
+
         }
 
         h4 {
           font-weight: 700;
           font-size: 1.2rem;
+
+          @media (min-width: 1024px) and (max-width: 1439px) {
+            font-size: 1.4rem;
+          }
 
           @media (min-width: 1440px) {
             font-size: 2rem;
@@ -929,6 +1066,12 @@ const CoursesSection = styled.div`
 
             cursor: pointer;
 
+            @media (min-width: 1024px) and (max-width: 1439px) {
+              img {
+                width: 4rem;
+              }
+            }
+
             @media (min-width: 1440px) {
               img {
                 width: 5rem;
@@ -940,8 +1083,14 @@ const CoursesSection = styled.div`
        .appDownload {
         margin-top: 3rem;
 
+        h4 {
+          @media (min-width: 1024px) and (max-width: 1439px) {
+            font-size: 1.4rem;
+          }
+        }
 
-        @media (min-width: 1440px) {
+
+        @media (min-width: 1024px) {
           margin-top: 0;
         }
 
@@ -951,6 +1100,12 @@ const CoursesSection = styled.div`
           gap: .5rem;
 
           cursor: pointer;
+
+          @media (min-width: 1024px) and (max-width: 1439px) {
+              img {
+                width: 15rem;
+              }
+            }
 
           @media (min-width: 1440px) {
               img {
@@ -969,7 +1124,7 @@ const CoursesSection = styled.div`
           }
 
         
-        @media (max-width: 1439px) {
+        @media (max-width: 1023px) {
           display: none;
         }
        }
@@ -978,7 +1133,7 @@ const CoursesSection = styled.div`
           width: 14.7rem;
           margin-top: 3rem;
 
-          @media (min-width: 1440px) {
+          @media (min-width: 1024px) {
             display: none;
           }
 
@@ -1004,13 +1159,18 @@ const CoursesSection = styled.div`
       padding: 0 2.4rem;
       margin-top: 2.2rem;
 
+      @media (min-width: 1024px) and (max-width: 1439px) {
+        padding: 0 9.2rem;
+        margin-top: 4rem;
+      }
+
       @media (min-width: 1440px) {
         padding: 0 12.4rem;
         margin-top: 6rem;
       }
 
       .learMoreContainer {
-        @media (min-width: 1440px) {
+        @media (min-width: 1024px) {
           display: flex;
           justify-content: space-between;
         }
@@ -1019,6 +1179,10 @@ const CoursesSection = styled.div`
       h4 {
         font-size: 1.2rem;
         font-weight: 700;
+
+        @media (min-width: 1024px) and (max-width: 1439px) {
+          font-size: 1.6rem;
+        }
 
         @media (min-width: 1440px) {
           font-size: 2rem;
@@ -1041,6 +1205,10 @@ const CoursesSection = styled.div`
           margin-top: .6rem;
           cursor: pointer;
 
+          @media (min-width: 1024px) and (max-width: 1439px) {
+          font-size: 1.3rem;
+        }
+
           @media (min-width: 1440px) {
             font-size: 1.8rem;
           }
@@ -1049,7 +1217,7 @@ const CoursesSection = styled.div`
         p:nth-child(2) {
           margin-bottom: 3rem;
 
-          @media (min-width: 1440px) {
+          @media (min-width: 1024px) {
             margin-bottom: 6rem;
           }
         }
@@ -1074,6 +1242,12 @@ const CoursesSection = styled.div`
         justify-content: space-between;
       }
 
+      @media (min-width: 1024px) and (max-width: 1439px) {
+        padding: 0 9.2rem;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
       p {
 
         font-size: 1rem;
@@ -1082,6 +1256,10 @@ const CoursesSection = styled.div`
         cursor: pointer;
 
         margin-top: .6rem;
+
+        @media (min-width: 1024px) and (max-width: 1439px) {
+          font-size: 1.2rem;
+        }
 
         @media (min-width: 1440px) {
           font-size: 1.4rem;
