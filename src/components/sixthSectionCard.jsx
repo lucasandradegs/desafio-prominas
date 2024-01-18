@@ -7,8 +7,8 @@ import { Krona_One } from 'next/font/google'
 const krona = Krona_One({ weight: '400', style: 'normal', subsets: ['latin'] })
 
 export const Container = styled.div`
-    width: 152px;
-    height: 188px;
+    width: 15.2rem;
+    height: 18.8rem;
 
     overflow: hidden;
     position: relative;

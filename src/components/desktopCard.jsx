@@ -12,7 +12,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 6px;
+    border-radius: .6rem;
     background: rgba(166, 139, 255, 0.40);
     box-shadow: 10.71px 10.71px 21.42px 0px rgba(0, 0, 0, 0.20);
     overflow: hidden;
@@ -30,8 +30,8 @@ export const Container = styled.div`
         margin-top: 3.8rem;
 
         img:nth-child(1) {
-            border-radius: 9px;
-            border: 3px solid #7500FF;
+            border-radius: .9rem;
+            border: .3rem solid #7500FF;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
 

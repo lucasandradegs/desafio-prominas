@@ -637,7 +637,7 @@ const FeedbackSection = styled.div`
         position: absolute;
         padding: 3.9rem 5rem;
         border: 1px solid rgba(166, 139, 255, 0.20);
-        border-radius: 10px; 
+        border-radius: 1rem; 
 
         background: rgba(166, 139, 255, 0.40);
         filter: drop-shadow(10.71px 10.71px 21.42px rgba(0, 0, 0, 0.20));
@@ -697,7 +697,7 @@ const FeedbackSection = styled.div`
 `;
 
 const DesktopFeedback = styled.div`
-    height: 612px;
+    height: 61.2rem;
     background: linear-gradient(90deg, #7500FF 10.24%, #7500FF 14.24%, #A68BFF 110.24%);
 
     padding: 0 12.4rem;
@@ -773,7 +773,7 @@ const DesktopQuestions = styled.div`
           display: flex;
           justify-content: space-between;
           
-          border-bottom-width: 2px;
+          border-bottom-width: .2rem;
           border-bottom-style: solid;
           border-bottom-color: ${(props) => props.theme.body === '#000' ? '#fff' : '#000'};
           
@@ -849,7 +849,7 @@ const CoursesSection = styled.div`
          .courseList li {
           font-size: 1rem;
           font-weight: 500;
-          line-height: 20px;
+          line-height: 2rem;
 
           cursor: pointer;
 
@@ -874,7 +874,7 @@ const CoursesSection = styled.div`
 
           font-size: 1rem;
           font-weight: 500;
-          line-height: 20px;
+          line-height: 2rem;
 
           cursor: pointer;
 
@@ -994,7 +994,7 @@ const CoursesSection = styled.div`
 
        }
 
-        border-bottom-width: 2px;
+        border-bottom-width: .2rem;
         border-bottom-style: solid;
         border-bottom-color: white;
 
@@ -1027,7 +1027,7 @@ const CoursesSection = styled.div`
 
       
 
-        border-bottom-width: 2px;
+        border-bottom-width: .2rem;
         border-bottom-style: solid;
         border-bottom-color: white;
 
@@ -1057,7 +1057,7 @@ const CoursesSection = styled.div`
     }
 
     .lightMode {
-        border-bottom-width: 2px;
+        border-bottom-width: .2rem;
         border-bottom-style: solid;
         border-bottom-color: #000;
       }

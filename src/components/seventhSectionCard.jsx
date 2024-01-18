@@ -73,14 +73,14 @@ export const Container = styled.div`
         p {
             text-align: center;
             margin-top: 1.2rem;
-            line-height: 26px;
+            line-height: 2.6rem;
             font-size: 2rem;
 
             color: #fff;
 
             @media (min-width: 1440px) {
                 font-size: 2.2rem;
-                line-height: 28.6px;
+                line-height: 2.86rem;
             }
         }
 
