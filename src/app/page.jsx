@@ -10,12 +10,11 @@ import { DesktopCard } from "../components/desktopCard";
 import { Krona_One, Poppins } from 'next/font/google'
 import { Footer } from "../components/footer"
 import styled from "styled-components";
-
-
+import { useEffect, useState } from "react";
+import { api } from "../app/services/api"
 
 const krona = Krona_One({ weight: '400', style: 'normal', subsets: ['latin'] })
 const poppins = Poppins({ weight: '400', style: 'normal', subsets: ['latin'] })
-
 
 export const Container = styled.div`
   width: 100%;
@@ -1072,7 +1071,16 @@ export const CoursesSection = styled.div`
 `;
 
 export default function Home() {
+  const [data, setData] = useState(null)
 
+  useEffect(() => {
+    async function fetchBrief() {
+      const res = await api.get(`/brief/65a91d948d730437bda1a48c`)
+      setData(res.data)
+      console.log(res.data)
+    }
+    fetchBrief()
+  }, [])
 
   return (
     <Container>
@@ -1209,7 +1217,7 @@ export default function Home() {
 
           <div className="desktopCardSection">
             <EigthSectionCard image="/alunoDesk.png" title="GRADUAÇÃO" />
-            <EigthSectionCard image="/aluno2desk.png" title="PÕS ONLINE" />
+            <EigthSectionCard image="/aluno2desk.png" title="PÓS ONLINE" />
             <EigthSectionCard image="/aluno3desk.png" title="SEGUNDA GRADUAÇÃO" />
             <EigthSectionCard image="/aluno4desk.png" title="DISCIPLINAS ISOLADAS" />
           </div>
@@ -1225,7 +1233,7 @@ export default function Home() {
         <img className="rightArrow" src="/rightArrow.svg" alt="" />
         <div className="feedbackMessage">
           <div className="messageAndGoogle">
-            <p className={poppins.className}>“A minha experiência como aluno da Faculdade Única foi maravilhosa, pois me possibilitou ter outra graduação superior (Licenciatura em Física) além de todo o arcabouço de conhecimento adquirido durante o curso, ajudando-me a estar bem preparado para o mercado de trabalho. Atualmente estou cursando outra segunda graduação (Licenciatura em Educação Física) e não tenho dúvida que será novamente uma experiência incrível. Além disso, a instituição de ensino é nota máxima no MEC e desejo que até o final desse curso ela alcance a etapa de ser Centro Universitário. Então só gratidão a toda a equipe da faculdade”</p>
+            <p className={poppins.className}>"{data}"</p>
             <div className="photoAndName">
               <img src="/aluno2.png" alt="" />
               <div className="textContainer">
