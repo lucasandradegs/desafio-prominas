@@ -459,9 +459,62 @@ const FifthSection = styled.div`
         }
       }
 
-      img {
-        margin-top: 3.4rem;
+      .playerSVG {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+
+        &:hover {
+          animation: pulse 2s infinite;
+          box-shadow: 15px 15px 30px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+
+        .svgplayerDesk {
+          @media (max-width: 1023px) {
+            display: none;
+          }
+        }
+
+        .svgplayer {
+          @media (min-width: 1024px) {
+            display: none;
+          }
+        }
+
+        img:nth-child(2) {
+          width: 4.8rem;
+          position: absolute;
+
+          @media (min-width: 1024px) {
+            width: 8rem;
+          }
+        }
       }
+
+      img {
+        cursor: pointer;
+        margin-top: 3.4rem;
+        
+      }
+
+      img:nth-child(1) {
+          opacity: 60%;
+        }
 
       @media (min-width: 1024px) and (max-width: 1439px) {
         img {
@@ -688,64 +741,21 @@ const EighthSection = styled.div`
   }
 `;
 
-const FeedbackSection = styled.div`
-    background: linear-gradient(90deg, #7500FF 10.24%, #7500FF 14.24%, #A68BFF 110.24%);
-
-    border-bottom-width: 10.5rem;
-    border-bottom-style: solid;
-    border-bottom-color: #7500FF;
-
-
-    img {
-      z-index: 0;
-
-    }
+const MobileFeedbackSection = styled.div`
+    height: 61rem;
+    background: linear-gradient(90deg, #7500FF 10.24%, #7500FF 14.24%, #A68BFF 110.24%);;
 
     @media (min-width: 1024px) {
       display: none;
     }
 
-    .leftArrow {
-      position: absolute;
-      margin-top: 30rem;
-      margin-left: .5rem;
-
-      @media (min-width: 376px) {
-        display: none;
-      }
-    }
-
-    .rightArrow {
-      position: absolute;
-      margin-top: 30rem;
-      margin-left: 36rem;
-
-      @media (min-width: 376px) {
-        display: none;
-      }
-    }
-
-    .feedbackSectionTitle {
+    .mobileFeedbackSection {
+      img:nth-child(2) {
         position: absolute;
-        display: flex;
-        padding: 0 2.4rem;
+        border-radius: 50%;
+        margin-left: -12rem;
 
-        img {
-          position: absolute;
-          border-radius: 50%;
-
-          margin-top: 8.7rem;
-          margin-left: 3.8rem;
-          z-index: 1;
-        }
-
-        h2 {
-          z-index: 1;
-          margin-top: 4rem;
-          font-size: 2rem;
-          text-align: center;
-          color: #fff;
-        }
+      }
     }
 
     .feedbackMessage {
@@ -753,23 +763,26 @@ const FeedbackSection = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      z-index: 1;
 
-        width: 90%;
-        height: 41rem;
-        margin-left: 2.1rem;
-        margin-top: 13.5rem;
-        position: absolute;
-        padding: 3.9rem 5rem;
-        border: 1px solid rgba(166, 139, 255, 0.20);
-        border-radius: 1rem; 
+      width: 90%;
+      height: 41rem;
+      margin-left: 2.1rem;
+      margin-top: 13.5rem;
+      position: absolute;
+      padding: 3.9rem 5rem;
+      border: 1px solid rgba(166, 139, 255, 0.20);
+      border-radius: 1rem; 
 
-        background: rgba(166, 139, 255, 0.40);
-        filter: drop-shadow(10.71px 10.71px 21.42px rgba(0, 0, 0, 0.20));
-        backdrop-filter: blur(16.065000534057617px);
-
-        .messageAndGoogle {
-            width: 25.4rem;
-            height: 30.7rem;
+      background: rgba(166, 139, 255, 0.40);
+      filter: drop-shadow(10.71px 10.71px 21.42px rgba(0, 0, 0, 0.20));
+      backdrop-filter: blur(16.065000534057617px);
+    
+      .messageAndGoogle {
+          display: flex;
+          flex-direction: column;
+          width: 25.4rem;
+          height: 30.7rem;
 
             p {
               text-align: center;
@@ -817,7 +830,38 @@ const FeedbackSection = styled.div`
             border-radius: 50%;
           }
         }
-}
+    }
+
+    .feedbackTitle {
+      padding: 0 2.4rem;
+
+      margin-top: 5rem;
+      position: absolute;
+      text-align: center;
+      z-index: 2;
+
+      h2 {
+          z-index: 1;
+          font-size: 2rem;
+          text-align: center;
+          color: #fff;
+        }
+    }
+    
+
+    .background1 {
+      position: absolute;
+      right: 0;
+      z-index: 1;    
+    }
+
+    .background2 {
+      position: absolute;
+      right: 0;
+      z-index: 0;
+      margin-top: 12.72rem;
+    }
+
 `;
 
 const DesktopFeedback = styled.div`
@@ -836,11 +880,19 @@ const DesktopFeedback = styled.div`
 
 
     .feedbackTitle {
+      padding: 0 9.2rem;
+      position: absolute;
+      margin-top: 10rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      width: 100%;
+
       h2 {
-        padding-top: 10rem;
         text-align: center;
         font-size: 3.2rem;
         color: #fff;
+        z-index: 1;
       }
     }
 
@@ -848,6 +900,7 @@ const DesktopFeedback = styled.div`
       position: absolute;
       right: 0;
       z-index: 0;
+      margin-top: 13.1rem;
       
     }
 
@@ -859,12 +912,9 @@ const DesktopFeedback = styled.div`
 
     .feedbackCards {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       gap: 2rem;
-
-      position: relative;
-
-      margin-top: 5rem;
+      padding-top: 18.2rem;
 
       backdrop-filter: blur(16.065000534057617px);
 
@@ -1361,8 +1411,14 @@ export default function Home() {
             <h2 className={krona.className}>Construa seu amanhã conosco</h2>
             <p className={poppins.className}>Com foco em inovação e qualidade, seja nos cursos presenciais ou online, utilizamos as mais modernas tecnologias para uma comunicação mais eficiente e eficaz entre professor e aluno, destinados à formação de profissionais qualificados, capazes de transformar a realidade socioeconômica do país.</p>
           </div>
-          <img className="mobileNotebook" src="/notebook.png" alt="" />
-          <img className="desktopNotebook" src="/notebookDkt.png" alt="" />
+          <div className="playerSVG">
+            <img className="mobileNotebook" src="/notebook.png" alt="" />
+            <img className="svgplayer" src="/play.svg" alt="" />
+          </div>
+          <div className="playerSVG">
+            <img className="desktopNotebook" src="/notebookDkt.png" alt="" />
+            <img className="svgplayerDesk" src="/play.svg" alt="" />
+          </div>
         </div>
       </FifthSection>
 
@@ -1422,40 +1478,44 @@ export default function Home() {
         </div>
       </EighthSection>
 
-      <FeedbackSection>
-        <div className="feedbackSectionTitle">
-          <h2 className={krona.className}>Quem faz a escolha certa, não se arrepende</h2>
-          <img src="/aluno.png" alt="" />
-        </div>
-        <img className="leftArrow" src="/leftArrow.svg" alt="" />
-        <img className="rightArrow" src="/rightArrow.svg" alt="" />
-        <div className="feedbackMessage">
-          <div className="messageAndGoogle">
-            <p className={poppins.className}>{data}</p>
-            <div className="photoAndName">
-              <img src="/aluno2.png" alt="" />
-              <div className="textContainer">
-                <h4 className={poppins.className}>TIAGO COSTA DA SILVA</h4>
-                <p className={poppins.className}>Segunda Graduação em Física</p>
+      <MobileFeedbackSection>
+        <div className="mobileFeedbackSection">
+          <div className="feedbackTitle">
+            <h2 className={krona.className}>Quem faz a escolha certa, não se arrepende</h2>
+            <img src="/aluno.png" alt="" />
+          </div>
+          <div className="background1">
+            <img src="/retangular.svg" alt="" />
+          </div>
+          <div className="feedbackMessage">
+            <div className="messageAndGoogle">
+              <p className={poppins.className}>{data}</p>
+              <div className="photoAndName">
+                <img src="/aluno2.png" alt="" />
+                <div className="textContainer">
+                  <h4 className={poppins.className}>TIAGO COSTA DA SILVA</h4>
+                  <p className={poppins.className}>Segunda Graduação em Física</p>
+                </div>
               </div>
+              <img src="/google.svg" alt="" />
             </div>
-            <img src="/google.svg" alt="" />
+          </div>
+          <div className="background2">
+            <img src="/mobileF.svg" alt="" />
           </div>
         </div>
-        <img className="retangularView" src="/retangular.svg" alt="" />
-
-      </FeedbackSection>
+      </MobileFeedbackSection>
 
       <DesktopFeedback>
         <div className="feebackSection">
+          <div className="feedbackTitle">
+            <h2 className={krona.className}>Lado a lado com a sua evolução</h2>
+          </div>
           <div className="background1">
             <img src="/vector.svg" alt="" />
           </div>
           <div className="background2">
             <img src="/vector2.svg" alt="" />
-          </div>
-          <div className="feedbackTitle">
-            <h2 className={krona.className}>Lado a lado com a sua evolução</h2>
           </div>
           <div className="feedbackCards">
             <DesktopCard video="/desktopCard.png" image="/student.png" name="PEDRO ALVARENGA ASSIS" course="Nome do curso" />

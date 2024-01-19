@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="431" height="481" viewBox="0 0 431 481" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="483" viewBox="0 0 375 483" fill="none">
   <defs>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="10.24%" style="stop-color: #7500FF" />
@@ -6,5 +6,5 @@
       <stop offset="110.24%" style="stop-color: #A68BFF" />
     </linearGradient>
   </defs>
-  <path d="M480.422 0.55127L0 480.974H348.408L480.422 348.959V0.55127Z" fill="url(#gradient)"/>
+  <path d="M480.789 0.211304L-2 483H348.124L480.789 350.335V0.211304Z" fill="url(#gradient)"/>
 </svg>

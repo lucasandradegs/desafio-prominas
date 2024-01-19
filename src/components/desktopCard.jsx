@@ -23,13 +23,27 @@ export const Container = styled.div`
         box-shadow: 15px 15px 30px 0px rgba(0, 0, 0, 0.3);
     }
 
+    
+
     .cardTitle  {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 3.8rem;
 
-        img:nth-child(1) {
+        .videoSVG {
+            position: absolute;
+            margin-top: 4.5rem;
+            z-index: 2;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1); 
+            }
+        }
+
+        img:nth-child(2) {
             border-radius: .9rem;
             border: .3rem solid #7500FF;
             cursor: pointer;
@@ -40,7 +54,7 @@ export const Container = styled.div`
             }
         }
 
-        img:nth-child(3) {
+        img:nth-child(4) {
             margin-top: 1.5rem;
             width: 17.7rem;
             cursor: pointer;
@@ -86,6 +100,7 @@ export function DesktopCard({ video, image, name, course }) {
     return (
         <Container>
             <div className="cardTitle">
+                <img className="videoSVG" src="/play.svg" alt="" />
                 <img src={video} alt="Vídeo do aluno" />
                 <div className="nameAndImage">
                     <img src={image} alt="Imagem do aluno" />
