@@ -9,12 +9,10 @@ export async function POST(request) {
     return NextResponse.json({message: "Brief created"}, { status: 201 })
 }
 
-export async function GET(request, { params }) {
-    const { id } = params;
-
+export async function GET() {
     await connectMongoDB()
-    const brief = await Brief.findOne({ _id: id })
-    return NextResponse.json (brief.feedback)
+    const brief = await Brief.find()
+    return NextResponse.json ({brief})
 }
 
 export async function DELETE(request) {

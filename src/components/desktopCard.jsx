@@ -3,6 +3,8 @@
 import styled from "styled-components";
 
 import { Poppins } from 'next/font/google'
+import { useEffect, useState } from "react";
+import { api } from "../app/services/api";
 
 const poppins = Poppins({ weight: '400', style: 'normal', subsets: ['latin'] })
 
@@ -86,6 +88,7 @@ export const Container = styled.div`
                 font-size: 1rem;
                 font-weight: 600;
                 color: #fff;
+                text-transform: uppercase;
             }
 
             p {
@@ -96,7 +99,18 @@ export const Container = styled.div`
     }
 `;
 
-export function DesktopCard({ video, image, name, course }) {
+export function DesktopCard({ video, image }) {
+    const [data, setData] = useState(null)
+
+    useEffect(() => {
+        async function fetchBrief() {
+            const res = await api.get(`/brief`)
+            setData(res.data)
+            console.log(res.data)
+        }
+        fetchBrief()
+    }, [])
+
     return (
         <Container>
             <div className="cardTitle">
@@ -105,11 +119,15 @@ export function DesktopCard({ video, image, name, course }) {
                 <div className="nameAndImage">
                     <img src={image} alt="Imagem do aluno" />
                     <div className="rightSide">
-                        <h2 className={poppins.className}>{name}</h2>
-                        <p className={poppins.className}>{course}</p>
+                        {data && (
+                            <>
+                                <h2 className={poppins.className}>{data.brief && data.brief[0] && data.brief[0].title}</h2>
+                                <p className={poppins.className}>{data.brief[0].course}</p>
+                            </>
+                        )}
                     </div>
                 </div>
-                    <img src="/google.svg" alt="" />
+                <img src="/google.svg" alt="" />
             </div>
         </Container>
     )

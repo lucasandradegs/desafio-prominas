@@ -818,6 +818,7 @@ const MobileFeedbackSection = styled.div`
           h4 {
             font-size: 1rem;
             color: #fff;
+            text-transform: uppercase;
           }
 
           p {
@@ -1323,7 +1324,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchBrief() {
-      const res = await api.get(`/brief/65a91d948d730437bda1a48c`)
+      const res = await api.get(`/brief`)
       setData(res.data)
       console.log(res.data)
     }
@@ -1489,12 +1490,18 @@ export default function Home() {
           </div>
           <div className="feedbackMessage">
             <div className="messageAndGoogle">
-              <p className={poppins.className}>{data}</p>
+              {data && (
+                <p className={poppins.className}>{data.brief && data.brief[0] && data.brief[0].feedback}</p>
+              )}
               <div className="photoAndName">
                 <img src="/aluno2.png" alt="" />
                 <div className="textContainer">
-                  <h4 className={poppins.className}>TIAGO COSTA DA SILVA</h4>
-                  <p className={poppins.className}>Segunda Graduação em Física</p>
+                  {data && data.brief && data.brief[0] && (
+                  <>
+                  <h4 className={poppins.className}>{data.brief[0].title}</h4>
+                  <p className={poppins.className}>{data.brief[0].course}</p>
+                  </>
+                  )}
                 </div>
               </div>
               <img src="/google.svg" alt="" />
@@ -1518,9 +1525,9 @@ export default function Home() {
             <img src="/vector2.svg" alt="" />
           </div>
           <div className="feedbackCards">
-            <DesktopCard video="/desktopCard.png" image="/student.png" name="PEDRO ALVARENGA ASSIS" course="Nome do curso" />
-            <DesktopCard video="/desktopCard.png" image="/student.png" name="PEDRO ALVARENGA ASSIS" course="Nome do curso" />
-            <DesktopCard video="/desktopCard.png" image="/student.png" name="PEDRO ALVARENGA ASSIS" course="Nome do curso" />
+            <DesktopCard video="/desktopCard.png" image="/student.png" />
+            <DesktopCard video="/desktopCard.png" image="/student.png" />
+            <DesktopCard video="/desktopCard.png" image="/student.png" />
           </div>
         </div>
       </DesktopFeedback>
