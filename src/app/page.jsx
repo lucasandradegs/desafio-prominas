@@ -97,7 +97,7 @@ const Content = styled.div`
         height: 2.5rem;
       }
 
-      img {
+      .logoDesk {
         cursor: pointer;
         width: 8.8rem;
       }
@@ -584,6 +584,14 @@ const SixthSection = styled.div`
     justify-content: center;
     gap: 2rem;
     margin-top: 3.2rem;
+
+    .fixedCard {
+      transition: transform 0.3s ease;
+
+      &:hover {
+          transform: scale(1.1);
+      }
+    }
 
     @media (min-width: 1024px) {
       display: none;
@@ -1345,7 +1353,7 @@ export default function Home() {
 
         <div className="desktopContent">
 
-          <img src="/desktopLogo.svg" alt="" />
+          <img className="logoDesk" src="/desktopLogo.svg" alt="" />
           <Input
             placeholder="Pesquise por um curso"
           />
@@ -1366,14 +1374,14 @@ export default function Home() {
             <h1 className={krona.className}>CONHEÇA A FACULDADE ÚNICA</h1>
             <p className={poppins.className}>Criando hoje o seu amanhã.</p>
           </div>
-          <img className="bannerMobile" src="/background.png" alt="" />
+          <img className="bannerMobile" src="/background.webp" alt="" />
         </div>
 
 
         <div className="desktopSection">
           <h2 className={krona.className}>CONHEÇA A <br ></br> FACULDADE ÚNICA</h2>
         </div>
-        <img className="bannerDesktop" src="/desktopBanner.png" alt="banner versão desktop" />
+        <img className="bannerDesktop" src="/desktopBanner.webp" alt="banner versão desktop" />
 
       </Section>
 
@@ -1383,12 +1391,12 @@ export default function Home() {
         <div className="imageMsg">
           <h2 className={poppins.className}>CRIANDO HOJE SEU AMANHÃ!</h2>
         </div>
-        <img className="mobileBanner" src="/mensagem.png" alt="" />
+        <img className="mobileBanner" src="/mensagem.webp" alt="" />
 
         <div className="desktopSection">
           <h2 className={poppins.className}>CRIANDO HOJE O SEU AMANHÃ!</h2>
         </div>
-        <img className="desktopBanner" src="/blackDesktop.png" alt="" />
+        <img className="desktopBanner" src="/blackDesktop.webp" alt="" />
       </SecondSection>
 
       <ThirdSection>
@@ -1400,9 +1408,9 @@ export default function Home() {
 
       <CardSection>
         <div className="cardDisplay">
-          <FirstSectionCard image="/diploma.png" title="+ de 489 mil Alunos certificados" />
-          <FirstSectionCard image="/brasil.png" title="+ de 250 Polos em todo Brasil" />
-          <FirstSectionCard image="/curso-online.png" title="+ de 900 cursos em diversas modalidades de ensino" />
+          <FirstSectionCard image="/diploma.webp" title="+ de 489 mil Alunos certificados" />
+          <FirstSectionCard image="/brasil.webp" title="+ de 250 Polos em todo Brasil" />
+          <FirstSectionCard image="/curso-online.webp" title="+ de 900 cursos em diversas modalidades de ensino" />
         </div>
       </CardSection>
 
@@ -1413,11 +1421,11 @@ export default function Home() {
             <p className={poppins.className}>Com foco em inovação e qualidade, seja nos cursos presenciais ou online, utilizamos as mais modernas tecnologias para uma comunicação mais eficiente e eficaz entre professor e aluno, destinados à formação de profissionais qualificados, capazes de transformar a realidade socioeconômica do país.</p>
           </div>
           <div className="playerSVG">
-            <img className="mobileNotebook" src="/notebook.png" alt="" />
+            <img className="mobileNotebook" src="/notebook.webp" alt="" />
             <img className="svgplayer" src="/play.svg" alt="" />
           </div>
           <div className="playerSVG">
-            <img className="desktopNotebook" src="/notebookDkt.png" alt="" />
+            <img className="desktopNotebook" src="/notebookDkt.webp" alt="" />
             <img className="svgplayerDesk" src="/play.svg" alt="" />
           </div>
         </div>
@@ -1427,14 +1435,14 @@ export default function Home() {
         <div className="sixthSectionTitle">
           <h2 className={krona.className}>Abra novas portas para o seu futuro</h2>
           <div className="cardWithTitle">
-            <img src="/card1.png" alt="" />
-            <SixthSectionCard image="/card2.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
+            <img className="fixedCard" src="/card1.webp" alt="" />
+            <SixthSectionCard image="/card2.webp" title="+ de 2.500 empresas e órgãos públicos conveniados" />
           </div>
           <div className="cardWithTitleDesktop">
-            <SixthSectionCard image="/card1desk.png" title="Cursos com nota máxima na avaliação do MEC" />
-            <SixthSectionCard image="/card2desk.png" title="+ de 2.500 empresas e órgãos públicos conveniados" />
-            <SixthSectionCard image="/card3desk.png" title="Estágio remunerado desde os primeiros períodos" />
-            <SixthSectionCard image="/card4desk.png" title="Professores mestres e doutores" />
+            <SixthSectionCard image="/card1desk.webp" title="Cursos com nota máxima na avaliação do MEC" />
+            <SixthSectionCard image="/card2desk.webp" title="+ de 2.500 empresas e órgãos públicos conveniados" />
+            <SixthSectionCard image="/card3desk.webp" title="Estágio remunerado desde os primeiros períodos" />
+            <SixthSectionCard image="/card4desk.webp" title="Professores mestres e doutores" />
           </div>
           <div className="cardsDots">
             <img className="dotsMobile" src="/dots.svg" alt="" />
@@ -1447,14 +1455,14 @@ export default function Home() {
         <div className="seventhSectionTitle">
           <h2 className={krona.className}>Mais que educação, uma transformação</h2>
           <div className="cardWithTitle">
-            <SeventhSectionCard image="/missao.png" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
-            <SeventhSectionCard image="/visao.png" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
-            <SeventhSectionCard image="/valores.png" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
+            <SeventhSectionCard image="/missao.webp" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
+            <SeventhSectionCard image="/visao.webp" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
+            <SeventhSectionCard image="/valores.webp" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
           </div>
           <div className="cardWithTitleDesktop">
-            <SeventhSectionCard image="/missaodesk.png" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
-            <SeventhSectionCard image="/visaodesk.png" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
-            <SeventhSectionCard image="/valoresdesk.png" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
+            <SeventhSectionCard image="/missaodesk.webp" title="Missão" subtitle="Promover a transformação humana, desenvolvendo competências e habilidades por meio de educação com propósito e tecnologia." />
+            <SeventhSectionCard image="/visaodesk.webp" title="Visão" subtitle="Ser uma instituição educacional de referência no Brasil, reconhecida pela excelência de seus cursos, alunos e profissionais." />
+            <SeventhSectionCard image="/valoresdesk.webp" title="Valores" subtitle="Excelência e qualidade, ética e honestidade, transformação social, autonomia responsável." />
           </div>
         </div>
       </SeventhSection>
@@ -1464,17 +1472,17 @@ export default function Home() {
           <h2 className={krona.className}>Sua jornada é Única</h2>
           <p className={poppins.className}>Escolha a melhor modalidade para você</p>
           <div className="eighthSectionCards">
-            <EigthSectionCard image="/photo1.png" title="GRADUAÇÃO" />
-            <EigthSectionCard image="/photo2.png" title="PÓS ONLINE" />
-            <EigthSectionCard image="/photo3.png" title="SEGUNDA GRADUAÇÃO" />
-            <EigthSectionCard image="/photo4.png" title="DISCIPLINAS ISOLADAS" />
+            <EigthSectionCard image="/photo1.webp" title="GRADUAÇÃO" />
+            <EigthSectionCard image="/photo2.webp" title="PÓS ONLINE" />
+            <EigthSectionCard image="/photo3.webp" title="SEGUNDA GRADUAÇÃO" />
+            <EigthSectionCard image="/photo4.webp" title="DISCIPLINAS ISOLADAS" />
           </div>
 
           <div className="desktopCardSection">
-            <EigthSectionCard image="/alunoDesk.png" title="GRADUAÇÃO" />
-            <EigthSectionCard image="/aluno2desk.png" title="PÓS ONLINE" />
-            <EigthSectionCard image="/aluno3desk.png" title="SEGUNDA GRADUAÇÃO" />
-            <EigthSectionCard image="/aluno4desk.png" title="DISCIPLINAS ISOLADAS" />
+            <EigthSectionCard image="/alunoDesk.webp" title="GRADUAÇÃO" />
+            <EigthSectionCard image="/aluno2desk.webp" title="PÓS ONLINE" />
+            <EigthSectionCard image="/aluno3desk.webp" title="SEGUNDA GRADUAÇÃO" />
+            <EigthSectionCard image="/aluno4desk.webp" title="DISCIPLINAS ISOLADAS" />
           </div>
         </div>
       </EighthSection>
@@ -1483,7 +1491,7 @@ export default function Home() {
         <div className="mobileFeedbackSection">
           <div className="feedbackTitle">
             <h2 className={krona.className}>Quem faz a escolha certa, não se arrepende</h2>
-            <img src="/aluno.png" alt="" />
+            <img src="/aluno.webp" alt="" />
           </div>
           <div className="background1">
             <img src="/retangular.svg" alt="" />
@@ -1494,7 +1502,7 @@ export default function Home() {
                 <p className={poppins.className}>{data.brief && data.brief[0] && data.brief[0].feedback}</p>
               )}
               <div className="photoAndName">
-                <img src="/aluno2.png" alt="" />
+                <img src="/aluno2.webp" alt="" />
                 <div className="textContainer">
                   {data && data.brief && data.brief[0] && (
                   <>
@@ -1525,9 +1533,9 @@ export default function Home() {
             <img src="/vector2.svg" alt="" />
           </div>
           <div className="feedbackCards">
-            <DesktopCard video="/desktopCard.png" image="/student.png" />
-            <DesktopCard video="/desktopCard.png" image="/student.png" />
-            <DesktopCard video="/desktopCard.png" image="/student.png" />
+            <DesktopCard video="/desktopCard.webp" image="/student.webp" />
+            <DesktopCard video="/desktopCard.webp" image="/student.webp" />
+            <DesktopCard video="/desktopCard.webp" image="/student.webp" />
           </div>
         </div>
       </DesktopFeedback>
@@ -1667,11 +1675,11 @@ export default function Home() {
             </div>
             <div className="mecSection">
               <h4 className={poppins.className}>Consulte aqui o cadastro da Instituição no Sistema e-MEC</h4>
-              <img src="/mec.png" alt="" />
+              <img src="/mec.webp" alt="" />
             </div>
             <div className="mecSectionDesk">
               <h4 className={poppins.className}>Consulte aqui o cadastro da Instituição no Sistema e-MEC</h4>
-              <img src="/mecdesk.png" alt="" />
+              <img src="/mecdesk.webp" alt="" />
             </div>
           </div>
           <div className="lightMode"></div>

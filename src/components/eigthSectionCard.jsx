@@ -21,6 +21,35 @@ export const Container = styled.div`
         display: flex;
         justify-content: center;
 
+        button {
+            position: absolute;
+            width: 12.7rem;
+            height: 2rem;
+            margin-top: 33.7rem;
+            font-size: 1rem;
+            border: 1px solid #FFF;
+            border-radius: .6rem;
+            background-color: transparent;
+            color: #FFF;
+            z-index: 1;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: rgba(3, 3, 3, 0.5);
+            }
+
+            @media (min-width: 1440px) {
+                
+                margin-top: 82rem;
+                width: 24.5rem;
+                height: 4.7rem;
+                font-size: 1.4rem;
+                z-index: 1;
+
+            }
+        }
+
         .titleAndButton {
             display: flex;
             flex-direction: column;
@@ -45,31 +74,6 @@ export const Container = styled.div`
                 }
             }
 
-            button {
-                width: 12.7rem;
-                height: 2rem;
-                margin-top: 3.2rem;
-                font-size: 1rem;
-                border: 1px solid #FFF;
-                border-radius: .3rem;
-                background-color: transparent;
-                color: #FFF;
-                z-index: 1;
-                cursor: pointer;
-                transition: background-color 0.3s ease-in-out;
-
-                &:hover {
-                    background-color: rgba(3, 3, 3, 0.5);
-                }
-
-                @media (min-width: 1440px) {
-                    width: 24.5rem;
-                    height: 4.7rem;
-                    font-size: 1.4rem;
-                    z-index: 1;
-                    margin-top: 9.1rem;
-                }
-            }
         }
 
         img {
@@ -93,8 +97,8 @@ export function EigthSectionCard({ image, title }) {
                 <img src={image} alt="Imagem do card" />
                 <div className="titleAndButton">
                     <h2 className={krona.className}>{title}</h2>
-                    <button className={krona.className}>SAIBA MAIS</button>
                 </div>
+                    <button className={krona.className}>SAIBA MAIS</button>
             </div>
         </Container>
     )

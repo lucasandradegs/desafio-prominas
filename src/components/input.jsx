@@ -8,37 +8,51 @@ const poppins = Poppins({ weight: '400', style: 'normal', subsets: ['latin'] })
 
 
 export const Container = styled.div`
-    
-    display: flex;
-    align-items: center;
 
     @media (max-width: 1439px) {
         width: 100%;
     }
 
+    img {
+        position: absolute;
+        margin-left: 1.2rem;
 
-    > input {
-        height: 2.2rem;
-        width: 100%;
+        width: 1.5rem;
+    }
 
-        padding: 1rem;
 
-        border: 0;
-        border-radius: .2rem;
+    .inputSVG {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-        &::placeholder {
-            color: #666464;
-            font-size: 1.2rem;
+        > input {
+            height: 2.2rem;
+            width: 100%; 
+            padding-left: 3.2rem;
+            padding-top: .2rem;
+    
+            border: 0;
+            border-radius: .2rem;
+
+            font-size: 1rem;
+    
+            &::placeholder {
+                color: #666464;
+                font-size: 1rem;
+            }
         }
     }
 
 `;
 
-export function Input({icon: Icon, ...rest}) {
+export function Input({ ...rest }) {
     return (
         <Container>
-            {Icon && <Icon size={20}/>}
-            <input className={poppins.className} {...rest} />
+            <div className="inputSVG">
+                <img src="lupa.svg" alt="" />
+                <input className={poppins.className} {...rest} />
+            </div>
         </Container>
     )
 }
