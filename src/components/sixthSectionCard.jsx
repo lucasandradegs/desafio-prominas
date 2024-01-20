@@ -12,6 +12,7 @@ export const Container = styled.div`
 
     overflow: hidden;
     position: relative;
+    perspective: 1000px;
     transition: transform 0.3s ease;
 
     &:hover {

@@ -78,14 +78,14 @@ export const Container = styled.div`
 
         img {
             position: absolute;
-            opacity: 50%;
+            opacity: ${(props) => (props.theme.body === '#000' ? '50%' : '100%')};
             border-radius: .4rem;
             z-index: 0;
             transition: opacity 0.3s ease-in-out;
         }
 
         &:hover img {
-            opacity: 100%;
+            opacity: ${(props) => (props.theme.body === '#000' ? '100%' : '50%')};
         }
     }
 `;

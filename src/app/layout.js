@@ -18,9 +18,15 @@ const StyledApp = styled.div`
     right: 1.9rem;
     top: .2rem;
     opacity: 0.2;
-    cursor: pointer; 
+    cursor: pointer;    
     background: none; 
     border: none;
+
+    
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      top: 1.4rem;
+      right: 9rem;
+    }
 
     @media (min-width: 1440px) {
       top: 1.4rem;

@@ -26,7 +26,10 @@ export const Container = styled.div`
         right: 0;
         bottom: 0;
         border: .2rem solid;
-        border-image: linear-gradient(to right, #A68BFF, #000000);
+        border-image: ${(props) =>
+        props.theme.body === '#000'
+            ? 'linear-gradient(to right, #A68BFF, #000000)'
+            : 'linear-gradient(to right, #A68BFF, #ffffff)'};
         border-image-slice: 1;
         border-radius: .8rem;
         z-index: -1;
@@ -40,7 +43,7 @@ export const Container = styled.div`
     }
 
     &:hover::before {
-        border-image: linear-gradient(to right, #6511c5, #0bceb1);
+        border-image: linear-gradient(to right, #6511c5, #e41d9889);
         border-image-slice: 1;
     }
 
